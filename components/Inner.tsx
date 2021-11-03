@@ -57,7 +57,7 @@ const CoadPlayer = styled.div`
     }
   }
 
-  #chord_text {
+  #scale_text {
     margin: 15px 0;
     text-align: center;
     h2 {
@@ -71,7 +71,7 @@ const CoadPlayer = styled.div`
     }
   }
 
-  #chord_types {
+  #scale_types {
     margin: 0 auto ;
     max-width: 700px;
     border: 1px solid #eee;
@@ -132,6 +132,12 @@ function Inner() {
     className: string;
     onClick: boolean;
     keyName: string;
+  };
+
+  interface keyTypeButtons {
+    value: string;
+    keyTypeName: string;
+    defaultChecked: boolean;
   };
 
   interface chordTypeButtons {
@@ -253,6 +259,23 @@ function Inner() {
   };
 
 
+  //キー変更イベント
+  const keyTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const getKeyValue: string = e.target.value;
+    console.log('getKeyValue', getKeyValue);
+    /* const getCurrentChordTypes: chordTypes = getChordTypes(getChordValue);
+    setChordValue(getCurrentChordTypes.chordValue);
+    setChordName(getCurrentChordTypes.chordName);
+    setChordKeys(getCurrentChordTypes.chordKeys.join(', '));
+
+    const getCurrentChords: string[][] = getChords(getCurrentChordTypes);
+    setChords(getCurrentChords);
+    if (rootKey !== '-') {
+      changeChordInterval(getCurrentChords);
+    } */
+  }
+
+
   //コードタイプ変更イベント
   const chordTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const getChordValue: string = e.target.value;
@@ -281,44 +304,26 @@ function Inner() {
             )}
           </div>
         </div>
-        <div id="chord_type">
-          <section id="chord_text">
+        <div id="scale_type">
+          <section id="scale_text">
             <h2 id="chord_type">{chordValue}</h2>
             <p id="chord_keys">構成音: {chordKeys}</p>
             <p id="chord_name">{rootKey}{chordName}: {chordsInterval}</p>
           </section>
-          <div id="chord_types">
+          <div id="scale_types">
             <dl id="root">
-              <dt>根音</dt>
+              <dt>キー</dt>
               <dd>
-                {inner.chordTypeButtons.root.map((val: chordTypeButtons) =>
-                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.cohrdTypeName}</label>
+                {inner.scaleTypeButtons.keyType.map((val: keyTypeButtons) =>
+                  <label key={val.value}><input key={val.value} type="radio" name="key" value={val.value} onChange={keyTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label>
                 )}
               </dd>
             </dl>
             <dl id="triad">
-              <dt>三和音</dt>
+              <dt>スケール</dt>
               <dd>
-                {inner.chordTypeButtons.triad.map((val: chordTypeButtons) =>
-                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.cohrdTypeName}</label>
-                )}
-              </dd>
-            </dl>
-            <dl id="seventh">
-              <dt>四和音</dt>
-              <dd>
-                {inner.chordTypeButtons.seventh.map((val: chordTypeButtons) =>
-                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.cohrdTypeName}</label>
-                )}
-              </dd>
-            </dl>
-            <dl id="tension">
-              <dt>五和音</dt>
-              <dd>
-                {inner.chordTypeButtons.tension.map((val: chordTypeButtons) =>
+                {inner.scaleTypeButtons.triad.map((val: chordTypeButtons) =>
                   <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.cohrdTypeName}</label>
                 )}

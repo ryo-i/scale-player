@@ -201,7 +201,21 @@
             "chordKeys": [1,4,8,10,15]
           }
       ],
-      "chordTypeButtons": {
+      "scaleTypeButtons": {
+        "keyType": [
+          {"value": "C4", "keyTypeName": "C", "defaultChecked": true},
+          {"value": "C#4", "keyTypeName": "C#"},
+          {"value": "D4", "keyTypeName": "D"},
+          {"value": "D#4", "keyTypeName": "D#"},
+          {"value": "E4", "keyTypeName": "E"},
+          {"value": "F4", "keyTypeName": "F"},
+          {"value": "F#4", "keyTypeName": "F#"},
+          {"value": "G4", "keyTypeName": "G"},
+          {"value": "G#4", "keyTypeName": "G#"},
+          {"value": "A4", "keyTypeName": "A"},
+          {"value": "A#4", "keyTypeName": "A#"},
+          {"value": "B4", "keyTypeName": "B"}
+        ],
         "root": [
           {"id": "chord_R", "value": "ルート", "cohrdTypeName": "(R)", "defaultChecked": true},
           {"id": "chord_5", "value": "パワーコード", "cohrdTypeName": "5"}

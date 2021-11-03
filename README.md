@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- 鍵盤を2オクターブにしてすべてアクティブに [#3](https://github.com/ryo-i/scale-player/issues/3)
+- キー変更ボタンを追加（値をconsoleに表示） [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
