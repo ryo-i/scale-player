@@ -10,12 +10,12 @@ const keyWidth = '37px'
 const CoadPlayer = styled.div`
   color: #fff;
   #key {
-    max-width: calc(${keyWidth} * 21);
+    max-width: calc(${keyWidth} * 15);
     margin: 0 auto;
     overflow-x: scroll;
     .key_inner {
       background: #333;
-      width: calc(${keyWidth} * 21);
+      width: calc(${keyWidth} * 15);
       display: block;
       padding: 0 0 10px;
       position: relative;
@@ -277,7 +277,7 @@ function Inner() {
           <div className="key_inner" ref={keyElement}>
             {inner.keyButtons.map((val: keyButtons) =>
               <button key={val.value} value={val.value} className={val.className}
-              onClick={val.onClick ? clickKey : null}>{val.keyName}</button>
+              onClick={clickKey}>{val.keyName}</button>
             )}
           </div>
         </div>

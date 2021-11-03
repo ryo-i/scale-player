@@ -8,7 +8,8 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- Vercelにデプロイ [#1](https://github.com/ryo-i/scale-player/issues/1)
+- 鍵盤を2オクターブにしてすべてアクティブに [#3](https://github.com/ryo-i/scale-player/issues/3)
+- スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
 
