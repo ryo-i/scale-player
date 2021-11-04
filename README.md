@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- キー変更ボタンの結果をページに表示 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- 鍵盤イベントの音を鳴らす以外の処理を無効化 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）

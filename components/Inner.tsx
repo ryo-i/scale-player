@@ -206,7 +206,7 @@ function Inner() {
     const eventTarget: HTMLButtonElement = e.target as HTMLButtonElement;
     const KeyValue: string = eventTarget.value;
     const getCurrentChord: string[] = getChord(KeyValue, chords);
-    setChord(getCurrentChord);
+    /* setChord(getCurrentChord);
     resetKey();
     currentKey(getCurrentChord);
 
@@ -214,7 +214,7 @@ function Inner() {
     const getRootkey: string = getChordsIntervalsArray[0];
     const getChordsIntervals: string = getChordsIntervalsArray.join(', ');
     setRootKey(getRootkey);
-    setChordInterval(getChordsIntervals);
+    setChordInterval(getChordsIntervals); */
 
     synth.triggerAttackRelease(getCurrentChord, 0.4);
   };
