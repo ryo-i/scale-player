@@ -71,8 +71,9 @@ const CoadPlayer = styled.div`
     }
   }
 
+  #key_types,
   #scale_types {
-    margin: 0 auto ;
+    margin: 0 auto 10px;
     max-width: 700px;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -112,7 +113,7 @@ function Inner() {
   const [synth, setSynth] = useState(null);
   const [chords, setChords] = useState(inner.keys);
   const [chord, setChord] = useState(['-']);
-  const [rootKey, setRootKey] = useState('-');
+  const [key, setKey] = useState(inner.scaleTypeButtons.keyType[0].keyTypeName);
   const [chordsInterval, setChordInterval] = useState('-');
   const [chordValue, setChordValue] = useState(inner.chordTypes[0].chordValue);
   const [chordName, setChordName] = useState(inner.chordTypes[0].chordName);
@@ -270,8 +271,8 @@ function Inner() {
     resetKey();
     currentKey(scaleArray);
 
-    const getRootkey = getKeyTypeName[0];
-    setRootKey(getRootkey);
+    const getkey = getKeyTypeName[0];
+    setKey(getkey);
     /* const getCurrentChordTypes: chordTypes = getChordTypes(getChordValue);
     setChordValue(getCurrentChordTypes.chordValue);
     setChordName(getCurrentChordTypes.chordName);
@@ -295,7 +296,7 @@ function Inner() {
 
     const getCurrentChords: string[][] = getChords(getCurrentChordTypes);
     setChords(getCurrentChords);
-    if (rootKey !== '-') {
+    if (key !== '-') {
       changeChordInterval(getCurrentChords);
     }
   }
@@ -317,9 +318,9 @@ function Inner() {
           <section id="scale_text">
             <h2 id="chord_type">{chordValue}</h2>
             <p id="chord_keys">構成音: {chordKeys}</p>
-            <p id="chord_name">{rootKey}{chordName}: {chordsInterval}</p>
+            <p id="chord_name">{key}{chordName}: {chordsInterval}</p>
           </section>
-          <div id="scale_types">
+          <div id="key_types">
             <dl id="root">
               <dt>キー</dt>
               <dd>
@@ -329,6 +330,8 @@ function Inner() {
                 )}
               </dd>
             </dl>
+          </div>
+          <div id="scale_types">
             <dl id="triad">
               <dt>スケール</dt>
               <dd>
