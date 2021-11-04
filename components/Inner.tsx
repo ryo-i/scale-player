@@ -324,7 +324,7 @@ function Inner() {
               <dt>キー</dt>
               <dd>
                 {inner.scaleTypeButtons.keyType.map((val: keyTypeButtons) =>
-                  <label key={val.value}><input key={val.value} type="radio" name="key" value={val.value} onChange={keyTypeSelect}
+                  <label key={val.value}><input key={val.value} id={val.value} type="radio" name="key" value={val.value} onChange={keyTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label>
                 )}
               </dd>
@@ -332,9 +332,9 @@ function Inner() {
             <dl id="triad">
               <dt>スケール</dt>
               <dd>
-                {inner.scaleTypeButtons.triad.map((val: chordTypeButtons) =>
+                {inner.scaleTypeButtons.scaleType.map((val: chordTypeButtons) =>
                   <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.cohrdTypeName}</label>
+                  defaultChecked={val.defaultChecked || null} />{val.value}</label>
                 )}
               </dd>
             </dl>

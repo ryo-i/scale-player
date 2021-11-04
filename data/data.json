@@ -216,43 +216,11 @@
           {"value": "A#4", "keyTypeName": "A#"},
           {"value": "B4", "keyTypeName": "B"}
         ],
-        "root": [
-          {"id": "chord_R", "value": "ルート", "cohrdTypeName": "(R)", "defaultChecked": true},
-          {"id": "chord_5", "value": "パワーコード", "cohrdTypeName": "5"}
-        ],
-        "triad": [
-          {"id": "chord_M", "value": "メジャー", "cohrdTypeName": "(M)"},
-          {"id": "chord_m", "value": "マイナー", "cohrdTypeName": "m"},
-          {"id": "chord_dim", "value": "ディミニッシュ", "cohrdTypeName": "dim"},
-          {"id": "chord_aug", "value": "オーギュメント", "cohrdTypeName": "aug"},
-          {"id": "chord_sus4", "value": "サスペンデッド4th", "cohrdTypeName": "sus4"}
-        ],
-        "seventh": [
-           {"id": "chord_M7", "value": "メジャー・セブンス", "cohrdTypeName": "M7"},
-           {"id": "chord_7", "value": "セブンス", "cohrdTypeName": "7"},
-           {"id": "chord_mM7", "value": "マイナー・メジャー・セブンス", "cohrdTypeName": "mM7"},
-           {"id": "chord_m7", "value": "マイナー・セブンス", "cohrdTypeName": "m7"},
-           {"id": "chord_m7-5", "value": "マイナー・セブンス・フラット・ファイブ", "cohrdTypeName": "m7(-5)"},
-           {"id": "chord_dim7", "value": "ディミニッシュ・セブンス", "cohrdTypeName": "dim7"},
-           {"id": "chord_augM7", "value": "オーギュメント・メジャー・セブンス", "cohrdTypeName": "augM7"},
-           {"id": "chord_aug7", "value": "オーギュメント・セブンス", "cohrdTypeName": "aug7"},
-           {"id": "chord_M7sus4", "value": "メジャー・セブンス・サスペンデッド4th", "cohrdTypeName": "M7sus4"},
-           {"id": "chord_7sus4", "value": "セブンス・サスペンデッド4th", "cohrdTypeName": "7sus4"},
-           {"id": "chord_6", "value": "シックスス", "cohrdTypeName": "6"},
-           {"id": "chord_m6", "value": "マイナー・シックスス", "cohrdTypeName": "m6"}
-        ],
-        "tension": [
-           {"id": "chord_M9", "value": "メジャー・ナインス", "cohrdTypeName": "M9"},
-           {"id": "chord_9", "value": "ナインス", "cohrdTypeName": "9"},
-           {"id": "chord_7_f9", "value": "セブンス・フラット・ナインス", "cohrdTypeName": "7(-9)"},
-           {"id": "chord_7_s9", "value": "セブンス・シャープ・ナインス", "cohrdTypeName": "7(+9)"},
-           {"id": "chord_m7_11", "value": "マイナー・セブンス・イレブンス", "cohrdTypeName": "m7(11)"},
-           {"id": "chord_7_s11", "value": "セブンス・シャープ・イレブンス", "cohrdTypeName": "7(+11)"},
-           {"id": "chord_M7_13", "value": "メジャー・セブンス・サーティーンズ", "cohrdTypeName": "M7(13)"},
-           {"id": "chord_7_13", "value": "セブンス・サーティーンズ", "cohrdTypeName": "7(13)"},
-           {"id": "chord_M7_f13", "value": "セブンス・フラット・サーティーンズ", "cohrdTypeName": "7(-13)"},
-           {"id": "chord_69", "value": "シックス・ナインス", "cohrdTypeName": "69"},
-           {"id": "chord_m69", "value": "マイナー・シックス・ナインス", "cohrdTypeName": "m69"}
+        "scaleType": [
+          {"id": "major_scale", "value": "メジャー・スケール", "cohrdTypeName": "Major scale", "defaultChecked": true},
+          {"id": "natural_minor_scale", "value": "ナチュラル・マイナー・スケール", "cohrdTypeName": "Natural minor scale"},
+          {"id": "harmonic_minor_scale", "value": "ハーモニック・マイナー・スケール", "cohrdTypeName": "Harmonic minor scale"},
+          {"id": "melodic_minor_scale", "value": "メロディック・マイナー・スケール", "cohrdTypeName": "Melodic minor scale"}
         ]
       }
     },
