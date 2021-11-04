@@ -262,7 +262,16 @@ function Inner() {
   //キー変更イベント
   const keyTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const getKeyValue: string = e.target.value;
-    console.log('getKeyValue', getKeyValue);
+    const scaleArray: string[] = [];
+
+    scaleArray.push(getKeyValue);
+    const getKeyTypeName = chordKeysText(scaleArray);
+
+    resetKey();
+    currentKey(scaleArray);
+
+    const getRootkey = getKeyTypeName[0];
+    setRootKey(getRootkey);
     /* const getCurrentChordTypes: chordTypes = getChordTypes(getChordValue);
     setChordValue(getCurrentChordTypes.chordValue);
     setChordName(getCurrentChordTypes.chordName);
