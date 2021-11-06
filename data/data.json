@@ -4,7 +4,7 @@
     },
     "header": {
       "title":"スケールプレイヤー",
-      "text": "いろいろな種類のスケール（音階）をキーごとに鍵盤の色で確認できます。（今はビートプレイヤーの内容！）"
+      "text": "いろいろな種類のスケール（音階）をキーごとに鍵盤の色で確認できます。"
     },
     "main": {
       "title":"メインページです",
@@ -201,21 +201,21 @@
             "chordKeys": [1,4,8,10,15]
           }
       ],
+      "keyTypeButtons": [
+        {"value": "C4", "keyTypeName": "C", "defaultChecked": true},
+        {"value": "C#4", "keyTypeName": "C#"},
+        {"value": "D4", "keyTypeName": "D"},
+        {"value": "D#4", "keyTypeName": "D#"},
+        {"value": "E4", "keyTypeName": "E"},
+        {"value": "F4", "keyTypeName": "F"},
+        {"value": "F#4", "keyTypeName": "F#"},
+        {"value": "G4", "keyTypeName": "G"},
+        {"value": "G#4", "keyTypeName": "G#"},
+        {"value": "A4", "keyTypeName": "A"},
+        {"value": "A#4", "keyTypeName": "A#"},
+        {"value": "B4", "keyTypeName": "B"}
+      ],
       "scaleTypeButtons": {
-        "keyType": [
-          {"value": "C4", "keyTypeName": "C", "defaultChecked": true},
-          {"value": "C#4", "keyTypeName": "C#"},
-          {"value": "D4", "keyTypeName": "D"},
-          {"value": "D#4", "keyTypeName": "D#"},
-          {"value": "E4", "keyTypeName": "E"},
-          {"value": "F4", "keyTypeName": "F"},
-          {"value": "F#4", "keyTypeName": "F#"},
-          {"value": "G4", "keyTypeName": "G"},
-          {"value": "G#4", "keyTypeName": "G#"},
-          {"value": "A4", "keyTypeName": "A"},
-          {"value": "A#4", "keyTypeName": "A#"},
-          {"value": "B4", "keyTypeName": "B"}
-        ],
         "scaleType": [
           {"id": "major_scale", "value": "メジャー・スケール", "cohrdTypeName": "Major scale", "defaultChecked": true},
           {"id": "natural_minor_scale", "value": "ナチュラル・マイナー・スケール", "cohrdTypeName": "Natural minor scale"},
