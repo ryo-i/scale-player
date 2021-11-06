@@ -53,22 +53,22 @@
           {
             "scaleValue": "メジャー・スケール",
             "scaleName": "Major scale",
-            "scaleKeys": [1]
+            "scaleKeys": [1, 3, 5, 6, 8, 10, 12, 13]
           },
           {
             "scaleValue": "ナチュラル・マイナー・スケール",
             "scaleName": "Natural minor scale",
-            "scaleKeys": [1]
+            "scaleKeys": [1, 3, 4, 6, 8, 9, 11, 13]
           },
           {
             "scaleValue": "ハーモニック・マイナー・スケール",
             "scaleName": "Harmonic minor scale",
-            "scaleKeys": [1]
+            "scaleKeys": [1, 3, 4, 6, 8, 9, 12, 13]
           },
           {
             "scaleValue": "メロディック・マイナー・スケール",
             "scaleName": "Melodic minor scale",
-            "scaleKeys": [1]
+            "scaleKeys": [1, 3, 4, 6, 8, 10, 12, 13]
           }
       ],
       "keyTypeButtons": [
