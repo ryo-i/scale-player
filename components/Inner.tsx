@@ -115,17 +115,17 @@ function Inner() {
   const [chord, setChord] = useState(['-']);
   const [keyType, setkeyType] = useState(inner.keyTypeButtons[0].keyTypeName);
   const [chordsInterval, setChordInterval] = useState('-');
-  const [chordValue, setChordValue] = useState(inner.chordTypes[0].chordValue);
-  const [chordName, setChordName] = useState(inner.chordTypes[0].chordName);
-  const [chordKeys, setChordKeys] = useState(inner.chordTypes[0].chordKeys.join(','));
+  const [scaleValue, setScaleValue] = useState(inner.scaleTypes[0].scaleValue);
+  const [scaleName, setScaleName] = useState(inner.scaleTypes[0].scaleName);
+  const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(','));
   const keyElement = useRef<HTMLInputElement>(null);
 
 
   // オブジェクト設定
-  interface chordTypes {
-    chordValue: string;
-    chordName: string;
-    chordKeys: number[];
+  interface scaleTypes {
+    scaleValue: string;
+    scaleName: string;
+    scaleKeys: number[];
   };
 
   interface keyButtons {
@@ -141,10 +141,10 @@ function Inner() {
     defaultChecked: boolean;
   };
 
-  interface chordTypeButtons {
+  interface scaleTypeButtons {
     id: string;
     value: string;
-    cohrdTypeName: string;
+    scaleTypeName: string;
     defaultChecked: boolean;
   };
 
@@ -221,29 +221,29 @@ function Inner() {
   };
 
 
-  // コードタイプ取得
-  const getChordTypes = (getChordValue: string): chordTypes => {
-    let getchordTypes: chordTypes;
-    for (let i = 0; i < inner.chordTypes.length; i++) {
-      if (inner.chordTypes[i].chordValue === getChordValue) {
-        getchordTypes = inner.chordTypes[i];
+  // スケールタイプ取得
+  const getScaleTypes = (getScaleValue: string): scaleTypes => {
+    let getScaleTypes: scaleTypes;
+    for (let i = 0; i < inner.scaleTypes.length; i++) {
+      if (inner.scaleTypes[i].scaleValue === getScaleValue) {
+        getScaleTypes = inner.scaleTypes[i];
       }
     }
-    return getchordTypes;
+    return getScaleTypes;
   };
 
 
-  //コード取得
-  const getChords = (chordTypes: chordTypes): string[][] => {
-    let getChords: string[][] = [];
+  // スケール取得
+  const getScales = (scaleTypes: scaleTypes): string[][] => {
+    let getScales: string[][] = [];
     for (let i = 0 ; i < inner.keys.length; i++) {
-      getChords.push([]);
-      for (var  j = 0; j < chordTypes['chordKeys'].length; j++){
-        const key: string = inner.scale[i+chordTypes['chordKeys'][j]];
-        getChords[i].push(key);
+      getScales.push([]);
+      for (var  j = 0; j < scaleTypes['scaleKeys'].length; j++){
+        const key: string = inner.scale[i+scaleTypes['scaleKeys'][j]];
+        getScales[i].push(key);
       }
     }
-    return getChords;
+    return getScales;
   };
 
 
@@ -286,19 +286,19 @@ function Inner() {
   }
 
 
-  //コードタイプ変更イベント
-  const chordTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const getChordValue: string = e.target.value;
-    const getCurrentChordTypes: chordTypes = getChordTypes(getChordValue);
-    setChordValue(getCurrentChordTypes.chordValue);
-    setChordName(getCurrentChordTypes.chordName);
-    setChordKeys(getCurrentChordTypes.chordKeys.join(', '));
+  // スケール変更イベント
+  const scaleTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const getScaleValue: string = e.target.value;
+    const getCurrentScaleTypes: scaleTypes = getScaleTypes(getScaleValue);
+    setScaleValue(getCurrentScaleTypes.scaleValue);
+    setScaleName(getCurrentScaleTypes.scaleName);
+    setScaleKeys(getCurrentScaleTypes.scaleKeys.join(', '));
 
-    const getCurrentChords: string[][] = getChords(getCurrentChordTypes);
+    const getCurrentChords: string[][] = getScales(getCurrentScaleTypes);
     setChords(getCurrentChords);
-    if (keyType !== '-') {
+   /* if (keyType !== '-') {
       changeChordInterval(getCurrentChords);
-    }
+    } */
   }
 
 
@@ -316,16 +316,16 @@ function Inner() {
         </div>
         <div id="scale_type">
           <section id="scale_text">
-            <h2 id="chord_type">{chordValue}</h2>
-            <p id="chord_keys">構成音: {chordKeys}</p>
-            <p id="chord_name">{keyType}{chordName}: {chordsInterval}</p>
+            <h2 id="scale_type">{scaleValue}</h2>
+            <p id="scale_keys">構成音: {scaleKeys}</p>
+            <p id="scale_name">{keyType} {scaleName}: {chordsInterval}</p>
           </section>
           <div id="key_types">
             <dl id="root">
               <dt>キー</dt>
               <dd>
                 {inner.keyTypeButtons.map((val: keyTypeButtons) =>
-                  <label key={val.value}><input key={val.value} id={val.value} type="radio" name="key" value={val.value} onChange={keyTypeSelect}
+                  <label key={val.value}><input key={val.value} id={val.value} type="radio" name="key_type" value={val.value} onChange={keyTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label>
                 )}
               </dd>
@@ -333,10 +333,10 @@ function Inner() {
           </div>
           <div id="scale_types">
             <dl id="triad">
-              <dt>スケール</dt>
+              <dt>基本スケール</dt>
               <dd>
-                {inner.scaleTypeButtons.scaleType.map((val: chordTypeButtons) =>
-                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="chord_type" value={val.value} onChange={chordTypeSelect}
+                {inner.scaleTypeButtons.BasicScale.map((val: scaleTypeButtons) =>
+                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="scale_type" value={val.value} onChange={scaleTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.value}</label>
                 )}
               </dd>
