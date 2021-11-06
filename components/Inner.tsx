@@ -114,18 +114,16 @@ function Inner() {
   const [scales, setScales] = useState([]);
   const [scale, setScale] = useState(['-']);
   const [keyValue, setKeyValue] = useState(inner.keyTypeButtons[0].value);
-  const [keyType, setkeyType] = useState(inner.keyTypeButtons[0].keyTypeName);
+  const [keyType, setKeyType] = useState(inner.keyTypeButtons[0].keyTypeName);
   const [scaleInterval, setScaleInterval] = useState('-');
   const [scaleValue, setScaleValue] = useState(inner.scaleTypes[0].scaleValue);
-  const [scaleName, setScaleName] = useState(inner.scaleTypes[0].scaleName);
-  const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(','));
+  const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(', '));
   const keyElement = useRef<HTMLInputElement>(null);
 
 
   // オブジェクト設定
   interface scaleTypes {
     scaleValue: string;
-    scaleName: string;
     scaleKeys: number[];
   };
 
@@ -145,7 +143,6 @@ function Inner() {
   interface scaleTypeButtons {
     id: string;
     value: string;
-    scaleTypeName: string;
     defaultChecked: boolean;
   };
 
@@ -193,13 +190,13 @@ function Inner() {
 
 
   // 鍵盤の構成音のテキスト取得
-  const chordKeysText = (chord: string[]): string[] => {
-    let chordKeysText: string[] = [];
-    for (let i = 0; i < chord.length; i++) {
-      const getChortText: string = chord[i].slice(0, -1);
-      chordKeysText.push(getChortText);
+  const scaleKeysText = (scale: string[]): string[] => {
+    let scaleKeysText: string[] = [];
+    for (let i = 0; i < scale.length; i++) {
+      const getScaleText: string = scale[i].slice(0, -1);
+      scaleKeysText.push(getScaleText);
     }
-    return chordKeysText;
+    return scaleKeysText;
   };
 
 
@@ -207,17 +204,6 @@ function Inner() {
   const clickKey = (e: React.MouseEvent<HTMLButtonElement>): void => {
     const eventTarget: HTMLButtonElement = e.target as HTMLButtonElement;
     const KeyValue: string = eventTarget.value;
-    /* const getCurrentChord: string[] = getChord(KeyValue, chords);
-    setChord(getCurrentChord);
-    resetKey();
-    currentKey(getCurrentChord);
-
-    const getChordsIntervalsArray: string[] = chordKeysText(getCurrentChord);
-    const getRootkey: string = getChordsIntervalsArray[0];
-    const getChordsIntervals: string = getChordsIntervalsArray.join(', ');
-    setRootKey(getRootkey);
-    setChordInterval(getChordsIntervals); */
-
     synth.triggerAttackRelease(KeyValue, 0.4);
   };
 
@@ -254,11 +240,10 @@ function Inner() {
     resetKey();
     currentKey(getCurrentScale);
 
-    const getChordsIntervalsArray: string[] = chordKeysText(getCurrentScale);
-    const getChordsIntervals: string = getChordsIntervalsArray.join(', ');
-    setScaleInterval(getChordsIntervals);
+    const getScalesIntervalsArray: string[] = scaleKeysText(getCurrentScale);
+    const getScalesIntervals: string = getScalesIntervalsArray.join(', ');
+    setScaleInterval(getScalesIntervals);
   };
-
 
 
   // スケール初期設定
@@ -274,26 +259,24 @@ function Inner() {
   //キー変更イベント
   const keyTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const getKeyValue: string = e.target.value;
+    setKeyValue(getKeyValue);
+
     const scaleArray: string[] = [];
-
     scaleArray.push(getKeyValue);
-    const getKeyTypeName = chordKeysText(scaleArray);
-
-    resetKey();
-    currentKey(scaleArray);
-
+    const getKeyTypeName = scaleKeysText(scaleArray);
     const getkey = getKeyTypeName[0];
-    setkeyType(getkey);
-    /* const getCurrentChordTypes: chordTypes = getChordTypes(getChordValue);
-    setChordValue(getCurrentChordTypes.chordValue);
-    setChordName(getCurrentChordTypes.chordName);
-    setChordKeys(getCurrentChordTypes.chordKeys.join(', '));
+    setKeyType(getkey);
 
-    const getCurrentChords: string[][] = getChords(getCurrentChordTypes);
-    setChords(getCurrentChords);
-    if (rootKey !== '-') {
-      changeChordInterval(getCurrentChords);
-    } */
+    const getCurrentScale: string[] = getScale(getKeyValue, scales);
+    setScale(getCurrentScale);
+    resetKey();
+    currentKey(getCurrentScale);
+
+    const getScalesIntervalsArray: string[] = scaleKeysText(getCurrentScale);
+    const getKeyType: string = getScalesIntervalsArray[0];
+    const getScalesIntervals: string = getScalesIntervalsArray.join(', ');
+    setKeyType(getKeyType);
+    setScaleInterval(getScalesIntervals);
   }
 
 
@@ -302,14 +285,11 @@ function Inner() {
     const getScaleValue: string = e.target.value;
     const getCurrentScaleTypes: scaleTypes = getScaleTypes(getScaleValue);
     setScaleValue(getCurrentScaleTypes.scaleValue);
-    setScaleName(getCurrentScaleTypes.scaleName);
     setScaleKeys(getCurrentScaleTypes.scaleKeys.join(', '));
 
     const getCurrentScales: string[][] = getScales(getCurrentScaleTypes);
     setScales(getCurrentScales);
-    if (keyType !== '-') {
-      changeScaleInterval(getCurrentScales);
-    }
+    changeScaleInterval(getCurrentScales);
   }
 
 
@@ -343,10 +323,10 @@ function Inner() {
             </dl>
           </div>
           <div id="scale_types">
-            <dl id="triad">
+            <dl id="basic_scale">
               <dt>基本スケール</dt>
               <dd>
-                {inner.scaleTypeButtons.BasicScale.map((val: scaleTypeButtons) =>
+                {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
                   <label key={val.id}><input key={val.id} type="radio" id={val.id} name="scale_type" value={val.value} onChange={scaleTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.value}</label>
                 )}

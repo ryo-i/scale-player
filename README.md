@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- スケールタイプの変更で鍵盤色とテキストを変更 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- キータイプ変更とスケールタイプ変更を連携 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
