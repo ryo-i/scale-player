@@ -23,6 +23,9 @@ const CoadPlayer = styled.div`
         width: ${keyWidth};
         text-align: center;
         display: inline-block;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .w_key {
         background: #FFF;
@@ -69,6 +72,21 @@ const CoadPlayer = styled.div`
     p {
       margin: 0;
     }
+    .start_button {
+      margin: 0 5px 0 0;
+      padding: 0;
+      width: 25px;
+      height: 20px;
+      font-size: 0.8em;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      background: #000;
+      color : #fff;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
   }
 
   #key_types,
@@ -98,6 +116,7 @@ const CoadPlayer = styled.div`
           margin: 0 10px 10px 0;
           display: inline-block;
           &:hover {
+            opacity: 0.8;
             cursor: pointer;
           }
         }
@@ -208,6 +227,22 @@ function Inner() {
   };
 
 
+  // 再生ボタンクリックイベント
+  const clickStart = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    // const getKeyValue: string = e.target.value;
+    const now = Tone.now();
+    let time: number = -0.5;
+    const currentScale = scale;
+    console.log('currentScale', currentScale);
+
+    for (let i = 0; i < currentScale.length; i++) {
+      time = time + 0.5;
+      synth.triggerAttackRelease(currentScale[i], '8n', now + time);
+      console.log('time', time)
+    }
+  };
+
+
   // スケールタイプ取得
   const getScaleTypes = (getScaleValue: string): scaleTypes => {
     let getScaleTypes: scaleTypes;
@@ -237,6 +272,7 @@ function Inner() {
   // スケール構成音変更
   const changeScaleInterval = (currentScales: string[][]): void => {
     const getCurrentScale: string[] = getScale(keyValue, currentScales);
+    setScale(getCurrentScale);
     resetKey();
     currentKey(getCurrentScale);
 
@@ -256,7 +292,7 @@ function Inner() {
   },[]);
 
 
-  //キー変更イベント
+  // キー変更イベント
   const keyTypeSelect = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const getKeyValue: string = e.target.value;
     setKeyValue(getKeyValue);
@@ -309,7 +345,7 @@ function Inner() {
           <section id="scale_text">
             <h2 id="scale_type">{scaleValue}（{keyType}）</h2>
             <p id="scale_keys">構成音：{scaleKeys}</p>
-            <p id="scale_name">音階：{scaleInterval}</p>
+            <p id="scale_name"><button value="start" className="start_button" onClick={clickStart}>▶︎</button>音階：{scaleInterval}</p>
           </section>
           <div id="key_types">
             <dl id="root">
