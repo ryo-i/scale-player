@@ -168,7 +168,7 @@ function Inner() {
 
   // シンセ設定
   useEffect(() => {
-    setSynth(new Tone.PolySynth().toDestination());
+    setSynth(new Tone.Synth().toDestination());
   },[]);
 
 
@@ -235,11 +235,33 @@ function Inner() {
     const currentScale = scale;
     console.log('currentScale', currentScale);
 
-    for (let i = 0; i < currentScale.length; i++) {
+    /* for (let i = 0; i < currentScale.length; i++) {
       time = time + 0.5;
       synth.triggerAttackRelease(currentScale[i], '8n', now + time);
       console.log('time', time)
-    }
+    } */
+
+
+    /* const synth = new Tone.Synth().toDestination();
+    const part = new Tone.Part(((time, note) => {
+      // the notes given as the second element in the array
+      // will be passed in as the second argument
+      synth.triggerAttackRelease(note, "8n", time);
+    }), [[0, "C2"], ["0:2", "C3"], ["0:3:2", "G2"]]);
+    Tone.Transport.start(); */
+
+
+    Tone.Transport.stop();
+    Tone.Transport.cancel();
+    const osc = new Tone.Oscillator().toDestination();
+    // repeated event every 8th note
+    // Tone.Transport.scheduleRepeat((time) => {
+    Tone.Transport.scheduleOnce((time) => {
+      // use the callback time to schedule events
+      osc.start(time).stop(time + 0.1);
+    }, "8n");
+    // transport must be started before it starts invoking events
+    Tone.Transport.start();
   };
 
 
