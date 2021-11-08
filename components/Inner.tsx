@@ -77,7 +77,8 @@ const CoadPlayer = styled.div`
       padding: 0;
       width: 25px;
       height: 20px;
-      font-size: 0.8em;
+      font-size: 10px;
+      font-family: inherit;
       border-radius: 5px;
       border: 1px solid #fff;
       background: #000;
@@ -137,6 +138,7 @@ function Inner() {
   const [scaleInterval, setScaleInterval] = useState('-');
   const [scaleValue, setScaleValue] = useState(inner.scaleTypes[0].scaleValue);
   const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(', '));
+  const [scalePlay, setScalePlay] = useState('▶︎');
   const keyElement = useRef<HTMLInputElement>(null);
 
 
@@ -227,13 +229,12 @@ function Inner() {
   };
 
 
-  // 再生ボタンクリックイベント
-  const clickStart = (e: React.MouseEvent<HTMLButtonElement>): void => {
-    // const getKeyValue: string = e.target.value;
-    const now = Tone.now();
+  // スケール再生
+  const playScale = (): void => {
+    /* const now = Tone.now();
     let time: number = -0.5;
     const currentScale = scale;
-    console.log('currentScale', currentScale);
+    console.log('currentScale', currentScale); */
 
     /* for (let i = 0; i < currentScale.length; i++) {
       time = time + 0.5;
@@ -250,20 +251,28 @@ function Inner() {
     }), [[0, "C2"], ["0:2", "C3"], ["0:3:2", "G2"]]);
     Tone.Transport.start(); */
 
-
-    Tone.Transport.stop();
-    Tone.Transport.cancel();
     const osc = new Tone.Oscillator().toDestination();
-    // repeated event every 8th note
-    // Tone.Transport.scheduleRepeat((time) => {
-    Tone.Transport.scheduleOnce((time) => {
-      // use the callback time to schedule events
+    Tone.Transport.scheduleRepeat((time) => {
+    // Tone.Transport.scheduleOnce((time) => {
       osc.start(time).stop(time + 0.1);
     }, "8n");
-    // transport must be started before it starts invoking events
-    Tone.Transport.start();
   };
 
+
+  // 再生ボタン
+  let changeScalePlay = (): void => {
+    if (scalePlay === "▶︎") {
+      setScalePlay("■");
+      Tone.Transport.stop();
+      Tone.Transport.cancel();
+      playScale();
+      Tone.Transport.start();
+    } else if (scalePlay === "■"){
+      setScalePlay("▶︎");
+      Tone.Transport.stop();
+      Tone.Transport.cancel();
+    }
+  };
 
   // スケールタイプ取得
   const getScaleTypes = (getScaleValue: string): scaleTypes => {
@@ -367,7 +376,7 @@ function Inner() {
           <section id="scale_text">
             <h2 id="scale_type">{scaleValue}（{keyType}）</h2>
             <p id="scale_keys">構成音：{scaleKeys}</p>
-            <p id="scale_name"><button value="start" className="start_button" onClick={clickStart}>▶︎</button>音階：{scaleInterval}</p>
+            <p id="scale_name"><button value="start" className="start_button" onClick={changeScalePlay}>{scalePlay}</button>音階：{scaleInterval}</p>
           </section>
           <div id="key_types">
             <dl id="root">
