@@ -138,7 +138,6 @@ function Inner() {
   const [scaleInterval, setScaleInterval] = useState('-');
   const [scaleValue, setScaleValue] = useState(inner.scaleTypes[0].scaleValue);
   const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(', '));
-  const [scalePlay, setScalePlay] = useState('▶︎');
   const keyElement = useRef<HTMLInputElement>(null);
 
 
@@ -234,29 +233,19 @@ function Inner() {
     const currentScale = scale;
     console.log('currentScale', currentScale);
 
-    // const synth = new Tone.Synth().toDestination();
     const seq = new Tone.Sequence((time, note) => {
-      // synth.triggerAttackRelease(note, 0.1, time);
       synth.triggerAttackRelease(note, '8n', time);
-      // subdivisions are given as subarrays
-    // }, ["C4", ["E4", "D4", "E4"], "G4", ["A4", "G4"]]).start(0);
-    }, currentScale).start(0);
+    }, currentScale).start();
+    seq.loop = false;
   };
 
 
   // 再生ボタン
   let changeScalePlay = (): void => {
-    if (scalePlay === "▶︎") {
-      setScalePlay("■");
-      Tone.Transport.stop();
-      Tone.Transport.cancel();
-      playScale();
-      Tone.Transport.start();
-    } else if (scalePlay === "■"){
-      setScalePlay("▶︎");
-      Tone.Transport.stop();
-      Tone.Transport.cancel();
-    }
+    Tone.Transport.stop();
+    Tone.Transport.cancel();
+    playScale();
+    Tone.Transport.start();
   };
 
   // スケールタイプ取得
@@ -361,7 +350,7 @@ function Inner() {
           <section id="scale_text">
             <h2 id="scale_type">{scaleValue}（{keyType}）</h2>
             <p id="scale_keys">構成音：{scaleKeys}</p>
-            <p id="scale_name"><button value="start" className="start_button" onClick={changeScalePlay}>{scalePlay}</button>音階：{scaleInterval}</p>
+            <p id="scale_name"><button value="start" className="start_button" onClick={changeScalePlay}>▶︎</button>音階：{scaleInterval}</p>
           </section>
           <div id="key_types">
             <dl id="root">

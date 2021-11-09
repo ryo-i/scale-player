@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- 再生設定をTone.Sequence()に変更 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- 再生・停止切り替えとループ再生をなくす [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
