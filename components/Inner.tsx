@@ -228,23 +228,22 @@ function Inner() {
   };
 
 
-  // スケール再生
-  const playScale = (): void => {
-    const currentScale = scale;
-    console.log('currentScale', currentScale);
-
-    const seq = new Tone.Sequence((time, note) => {
-      synth.triggerAttackRelease(note, '8n', time);
-    }, currentScale).start();
-    seq.loop = false;
-  };
-
-
   // 再生ボタン
   let changeScalePlay = (): void => {
     Tone.Transport.stop();
     Tone.Transport.cancel();
-    playScale();
+
+    const currentScale = scale;
+    console.log('currentScale', currentScale);
+
+    const synth = new Tone.Synth().toDestination();
+    const seq = new Tone.Sequence((time, note) => {
+      synth.triggerAttackRelease(note, '8n', time);
+    }, currentScale).start(0);
+
+    seq.loop = false;
+    Tone.Transport.bpm.value = 80;
+
     Tone.Transport.start();
   };
 
