@@ -231,31 +231,16 @@ function Inner() {
 
   // スケール再生
   const playScale = (): void => {
-    /* const now = Tone.now();
-    let time: number = -0.5;
     const currentScale = scale;
-    console.log('currentScale', currentScale); */
+    console.log('currentScale', currentScale);
 
-    /* for (let i = 0; i < currentScale.length; i++) {
-      time = time + 0.5;
-      synth.triggerAttackRelease(currentScale[i], '8n', now + time);
-      console.log('time', time)
-    } */
-
-
-    /* const synth = new Tone.Synth().toDestination();
-    const part = new Tone.Part(((time, note) => {
-      // the notes given as the second element in the array
-      // will be passed in as the second argument
-      synth.triggerAttackRelease(note, "8n", time);
-    }), [[0, "C2"], ["0:2", "C3"], ["0:3:2", "G2"]]);
-    Tone.Transport.start(); */
-
-    const osc = new Tone.Oscillator().toDestination();
-    Tone.Transport.scheduleRepeat((time) => {
-    // Tone.Transport.scheduleOnce((time) => {
-      osc.start(time).stop(time + 0.1);
-    }, "8n");
+    // const synth = new Tone.Synth().toDestination();
+    const seq = new Tone.Sequence((time, note) => {
+      // synth.triggerAttackRelease(note, 0.1, time);
+      synth.triggerAttackRelease(note, '8n', time);
+      // subdivisions are given as subarrays
+    // }, ["C4", ["E4", "D4", "E4"], "G4", ["A4", "G4"]]).start(0);
+    }, currentScale).start(0);
   };
 
 
