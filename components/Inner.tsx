@@ -121,6 +121,13 @@ const CoadPlayer = styled.div`
             cursor: pointer;
           }
         }
+        .w_key {
+          font-weight: bold;
+        }
+        .b_key {
+          font-weight: lighter;
+          color: #999;
+        }
       }
     }
   }
@@ -157,6 +164,7 @@ function Inner() {
   interface keyTypeButtons {
     value: string;
     keyTypeName: string;
+    className: string;
     defaultChecked: boolean;
   };
 
@@ -356,7 +364,7 @@ function Inner() {
               <dt>キー</dt>
               <dd>
                 {inner.keyTypeButtons.map((val: keyTypeButtons) =>
-                  <label key={val.value}><input key={val.value} id={val.value} type="radio" name="key_type" value={val.value} onChange={keyTypeSelect}
+                  <label key={val.value} className={val.className}><input key={val.value} type="radio" name="key_type" value={val.value} onChange={keyTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label>
                 )}
               </dd>
@@ -375,7 +383,7 @@ function Inner() {
             <dl id="church_mode">
               <dt>メジャー・スケール（チャーチ・モード）</dt>
               <dd>
-                {inner.scaleTypeButtons.ChurchMode.map((val: scaleTypeButtons) =>
+                {inner.scaleTypeButtons.churchMode.map((val: scaleTypeButtons) =>
                   <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
                 )}

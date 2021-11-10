@@ -17,31 +17,31 @@
           ["C6"]
       ],
       "keyButtons": [
-        {"value": "C4" , "className": "w_key", "keyName": "C"},
-        {"value": "C#4" , "className": "b_key" , "keyName": "C#"},
-        {"value": "D4" , "className": "w_key" , "keyName": "D"},
-        {"value": "D#4" , "className": "b_key" , "keyName": "D#"},
-        {"value": "E4" , "className": "w_key" , "keyName": "E"},
-        {"value": "F4" , "className": "w_key" , "keyName": "F"},
-        {"value": "F#4" , "className": "b_key" , "keyName": "F#"},
-        {"value": "G4" , "className": "w_key" , "keyName": "G"},
-        {"value": "G#4" , "className": "b_key" , "keyName": "G#"},
-        {"value": "A4" , "className": "w_key" , "keyName": "A"},
-        {"value": "A#4" , "className": "b_key" , "keyName": "A#"},
-        {"value": "B4" , "className": "w_key" , "keyName": "B"},
-        {"value": "C5" , "className": "w_key" , "keyName": "C"},
-        {"value": "C#5" , "className": "b_key" , "keyName": "C#"},
-        {"value": "D5" , "className": "w_key" , "keyName": "D"},
-        {"value": "D#5" , "className": "b_key" , "keyName": "D#"},
-        {"value": "E5" , "className": "w_key" , "keyName": "E"},
-        {"value": "F5" , "className": "w_key" , "keyName": "F"},
-        {"value": "F#5" , "className": "b_key" , "keyName": "F#"},
-        {"value": "G5" , "className": "w_key" , "keyName": "G"},
-        {"value": "G#5" , "className": "b_key" , "keyName": "G#"},
-        {"value": "A5" , "className": "w_key" , "keyName": "A"},
-        {"value": "A#5" , "className": "b_key" , "keyName": "A#"},
-        {"value": "B5" , "className": "w_key" , "keyName": "B"},
-        {"value": "C6" , "className": "w_key" , "keyName": "C"}
+        {"value": "C4", "className": "w_key", "keyName": "C"},
+        {"value": "C#4", "className": "b_key", "keyName": "C#"},
+        {"value": "D4", "className": "w_key", "keyName": "D"},
+        {"value": "D#4", "className": "b_key", "keyName": "D#"},
+        {"value": "E4", "className": "w_key", "keyName": "E"},
+        {"value": "F4", "className": "w_key", "keyName": "F"},
+        {"value": "F#4", "className": "b_key", "keyName": "F#"},
+        {"value": "G4", "className": "w_key", "keyName": "G"},
+        {"value": "G#4", "className": "b_key", "keyName": "G#"},
+        {"value": "A4", "className": "w_key", "keyName": "A"},
+        {"value": "A#4", "className": "b_key", "keyName": "A#"},
+        {"value": "B4", "className": "w_key", "keyName": "B"},
+        {"value": "C5", "className": "w_key", "keyName": "C"},
+        {"value": "C#5", "className": "b_key", "keyName": "C#"},
+        {"value": "D5", "className": "w_key", "keyName": "D"},
+        {"value": "D#5", "className": "b_key", "keyName": "D#"},
+        {"value": "E5", "className": "w_key", "keyName": "E"},
+        {"value": "F5", "className": "w_key", "keyName": "F"},
+        {"value": "F#5", "className": "b_key", "keyName": "F#"},
+        {"value": "G5", "className": "w_key", "keyName": "G"},
+        {"value": "G#5", "className": "b_key", "keyName": "G#"},
+        {"value": "A5", "className": "w_key", "keyName": "A"},
+        {"value": "A#5", "className": "b_key", "keyName": "A#"},
+        {"value": "B5", "className": "w_key", "keyName": "B"},
+        {"value": "C6", "className": "w_key", "keyName": "C"}
       ],
       "scale": [
           "null",
@@ -96,18 +96,18 @@
           }
       ],
       "keyTypeButtons": [
-        {"value": "C4", "keyTypeName": "C", "defaultChecked": true},
-        {"value": "C#4", "keyTypeName": "C#"},
-        {"value": "D4", "keyTypeName": "D"},
-        {"value": "D#4", "keyTypeName": "D#"},
-        {"value": "E4", "keyTypeName": "E"},
-        {"value": "F4", "keyTypeName": "F"},
-        {"value": "F#4", "keyTypeName": "F#"},
-        {"value": "G4", "keyTypeName": "G"},
-        {"value": "G#4", "keyTypeName": "G#"},
-        {"value": "A4", "keyTypeName": "A"},
-        {"value": "A#4", "keyTypeName": "A#"},
-        {"value": "B4", "keyTypeName": "B"}
+        {"value": "C4", "keyTypeName": "C", "className": "w_key", "defaultChecked": true},
+        {"value": "C#4", "keyTypeName": "C#", "className": "b_key"},
+        {"value": "D4", "keyTypeName": "D", "className": "w_key"},
+        {"value": "D#4", "keyTypeName": "D#", "className": "b_key"},
+        {"value": "E4", "keyTypeName": "E", "className": "w_key"},
+        {"value": "F4", "keyTypeName": "F", "className": "w_key"},
+        {"value": "F#4", "keyTypeName": "F#", "className": "b_key"},
+        {"value": "G4", "keyTypeName": "G", "className": "w_key"},
+        {"value": "G#4", "keyTypeName": "G#", "className": "b_key"},
+        {"value": "A4", "keyTypeName": "A", "className": "w_key"},
+        {"value": "A#4", "keyTypeName": "A#", "className": "b_key"},
+        {"value": "B4", "keyTypeName": "B", "className": "w_key"}
       ],
       "scaleTypeButtons": {
         "basicScale": [
@@ -130,7 +130,7 @@
             "className": "melodic_minor_scale"
           }
         ],
-        "ChurchMode": [
+        "churchMode": [
           {
             "scaleValue": "アイオニアン・スケール",
             "className": "ionian_scale"
