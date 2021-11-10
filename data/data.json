@@ -65,6 +65,34 @@
           {
             "scaleValue": "メロディック・マイナー・スケール",
             "scaleKeys": [1, 3, 4, 6, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "アイオニアン・スケール",
+            "scaleKeys": [1, 3, 5, 6, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "ドリアン・スケール",
+            "scaleKeys": [1, 3, 4, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "フリジアン・スケール",
+            "scaleKeys": [1, 2, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "リディアン・スケール",
+            "scaleKeys": [1, 3, 5, 7, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "ミクソリディアン・スケール",
+            "scaleKeys": [1, 3, 5, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "エオリアン・スケール",
+            "scaleKeys": [1, 3, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "ロクリアン・スケール",
+            "scaleKeys": [1, 2, 4, 6, 7, 9, 11, 13]
           }
       ],
       "keyTypeButtons": [
@@ -83,10 +111,54 @@
       ],
       "scaleTypeButtons": {
         "basicScale": [
-          {"id": "major_scale", "value": "メジャー・スケール", "defaultChecked": true},
-          {"id": "natural_minor_scale", "value": "ナチュラル・マイナー・スケール"},
-          {"id": "harmonic_minor_scale", "value": "ハーモニック・マイナー・スケール"},
-          {"id": "melodic_minor_scale", "value": "メロディック・マイナー・スケール"}
+          {
+            "scaleValue": "メジャー・スケール",
+            "className": "major_scale",
+            "defaultChecked": true
+          },
+          {
+            "scaleValue": "ナチュラル・マイナー・スケール",
+            "className": "natural_minor_scale"
+          },
+          {
+            "scaleValue": "ハーモニック・マイナー・スケール",
+            "className": "harmonic_minor_scale"
+
+          },
+          {
+            "scaleValue": "メロディック・マイナー・スケール",
+            "className": "melodic_minor_scale"
+          }
+        ],
+        "ChurchMode": [
+          {
+            "scaleValue": "アイオニアン・スケール",
+            "className": "ionian_scale"
+          },
+          {
+            "scaleValue": "ドリアン・スケール",
+            "className": "dorian_scale"
+          },
+          {
+            "scaleValue": "フリジアン・スケール",
+            "className": "phrigian_scale"
+          },
+          {
+            "scaleValue": "リディアン・スケール",
+            "className": "lydian_scale"
+          },
+          {
+            "scaleValue": "ミクソリディアン・スケール",
+            "className": "mixolydian_scale"
+          },
+          {
+            "scaleValue": "エオリアン・スケール",
+            "className": "aeolian_scale"
+          },
+          {
+            "scaleValue": "ロクリアン・スケール",
+            "className": "locrian_scale"
+          }
         ]
       }
     },

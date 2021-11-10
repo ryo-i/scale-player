@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- スケール再生用シンセ、再生BPMを設定 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- チャーチモード追加 & リファクタリング [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）

@@ -161,8 +161,8 @@ function Inner() {
   };
 
   interface scaleTypeButtons {
-    id: string;
-    value: string;
+    scaleValue: string;
+    className: string;
     defaultChecked: boolean;
   };
 
@@ -367,8 +367,17 @@ function Inner() {
               <dt>基本スケール</dt>
               <dd>
                 {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
-                  <label key={val.id}><input key={val.id} type="radio" id={val.id} name="scale_type" value={val.value} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.value}</label>
+                  <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
+                )}
+              </dd>
+            </dl>
+            <dl id="church_mode">
+              <dt>メジャー・スケール（チャーチ・モード）</dt>
+              <dd>
+                {inner.scaleTypeButtons.ChurchMode.map((val: scaleTypeButtons) =>
+                  <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
                 )}
               </dd>
             </dl>
