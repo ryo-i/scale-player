@@ -135,112 +135,111 @@
       "scaleTypeButtons": {
         "basicScale": [
           {
-            "scaleName": "メジャー・スケール",
             "scaleValue": "major_scale",
+            "scaleName": "メジャー・スケール",
             "defaultChecked": true
           },
           {
-            "scaleName": "ナチュラル・マイナー・スケール",
-            "scaleValue": "natural_minor_scale"
+            "scaleValue": "natural_minor_scale",
+            "scaleName": "ナチュラル・マイナー・スケール"
           },
           {
-            "scaleName": "ハーモニック・マイナー・スケール",
-            "scaleValue": "harmonic_minor_scale"
-
+            "scaleValue": "harmonic_minor_scale",
+            "scaleName": "ハーモニック・マイナー・スケール"
           },
           {
-            "scaleName": "メロディック・マイナー・スケール",
-            "scaleValue": "melodic_minor_scale"
+            "scaleValue": "melodic_minor_scale",
+            "scaleName": "メロディック・マイナー・スケール"
           }
         ],
         "majorScale": [
           {
-            "scaleName": "アイオニアン・スケール",
-            "scaleValue": "ionian_scale"
+            "scaleValue": "ionian_scale",
+            "scaleName": "アイオニアン・スケール"
           },
           {
-            "scaleName": "ドリアン・スケール",
-            "scaleValue": "dorian_scale"
+            "scaleValue": "dorian_scale",
+            "scaleName": "ドリアン・スケール"
           },
           {
-            "scaleName": "フリジアン・スケール",
-            "scaleValue": "phrigian_scale"
+            "scaleValue": "phrigian_scale",
+            "scaleName": "フリジアン・スケール"
           },
           {
-            "scaleName": "リディアン・スケール",
-            "scaleValue": "lydian_scale"
+            "scaleValue": "lydian_scale",
+            "scaleName": "リディアン・スケール"
           },
           {
-            "scaleName": "ミクソリディアン・スケール",
-            "scaleValue": "mixolydian_scale"
+            "scaleValue": "mixolydian_scale",
+            "scaleName": "ミクソリディアン・スケール"
           },
           {
-            "scaleName": "エオリアン・スケール",
-            "scaleValue": "aeolian_scale"
+            "scaleValue": "aeolian_scale",
+            "scaleName": "エオリアン・スケール"
           },
           {
-            "scaleName": "ロクリアン・スケール",
-            "scaleValue": "locrian_scale"
+            "scaleValue": "locrian_scale",
+            "scaleName": "ロクリアン・スケール"
           }
         ],
         "naturalMinorScale": [
           {
-            "scaleName": "エオリアン・スケール",
-            "scaleValue": "aeolian_scale"
+            "scaleValue": "aeolian_scale",
+            "scaleName": "エオリアン・スケール"
           },
           {
-            "scaleName": "ロクリアン・スケール",
-            "scaleValue": "locrian_scale"
+            "scaleValue": "locrian_scale",
+            "scaleName": "ロクリアン・スケール"
           },
           {
-            "scaleName": "アイオニアン・スケール",
-            "scaleValue": "ionian_scale"
+            "scaleValue": "ionian_scale",
+            "scaleName": "アイオニアン・スケール"
           },
           {
-            "scaleName": "ドリアン・スケール",
-            "scaleValue": "dorian_scale"
+            "scaleValue": "dorian_scale",
+            "scaleName": "ドリアン・スケール"
           },
           {
-            "scaleName": "フリジアン・スケール",
-            "scaleValue": "phrigian_scale"
+            "scaleValue": "phrigian_scale",
+            "scaleName": "フリジアン・スケール"
           },
           {
-            "scaleName": "リディアン・スケール",
-            "scaleValue": "lydian_scale"
+            "scaleValue": "lydian_scale",
+            "scaleName": "リディアン・スケール"
           },
           {
-            "scaleName": "ミクソリディアン・スケール",
-            "scaleValue": "mixolydian_scale"
+            "scaleValue": "mixolydian_scale",
+            "scaleName": "ミクソリディアン・スケール"
           }
         ],
         "harmonicMinorScale": [
           {
-            "scaleName": "ハーモニック・マイナー・スケール",
-            "scaleValue": "harmonic_minor_scale"
+            "scaleValue": "harmonic_minor_scale",
+            "scaleName": "ハーモニック・マイナー・スケール"
           },
           {
-            "scaleName": "ロクリアン♮6・スケール",
-            "scaleValue": "locrian_n6_scale"
+            "scaleValue": "locrian_n6_scale",
+            "scaleName": "ロクリアン♮6・スケール"
           },
           {
-            "scaleName": "アイオニアン♯5・スケール",
-            "scaleValue": "ionian_s5_scale"
+            "scaleValue": "ionian_s5_scale",
+            "scaleName": "アイオニアン♯5・スケール"
           },
           {
-            "scaleName": "ドリアン♯4・スケール",
-            "scaleValue": "dorian_s4_scale"
+            "scaleValue": "dorian_s4_scale",
+            "scaleName": "ドリアン♯4・スケール"
           },
           {
-            "scaleName": "フリジアン・メジャー・スケール",
-            "scaleValue": "phrigian_major_scale"
+            "scaleValue": "phrigian_major_scale",
+            "scaleName": "フリジアン・メジャー・スケール"
           },
           {
-            "scaleName": "リディアン♯2・スケール",
-            "scaleValue": "lydian_n2_scale"
+            "scaleValue": "lydian_n2_scale",
+            "scaleName": "リディアン♯2・スケール"
           },
           {
-            "scaleName": "スーパー・ロクリアン♭7・スケール",
-            "scaleValue": "super_locrian_f7_scale"
+            "scaleValue": "super_locrian_f7_scale",
+            "scaleName": "スーパー・ロクリアン♭7・スケール"
           }
         ]
       }

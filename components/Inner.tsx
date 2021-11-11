@@ -243,13 +243,10 @@ function Inner() {
     Tone.Transport.cancel();
 
     const currentScale = scale;
-    console.log('currentScale', currentScale);
-
     const synth = new Tone.Synth().toDestination();
     const seq = new Tone.Sequence((time, note) => {
       synth.triggerAttackRelease(note, '8n', time);
     }, currentScale).start(0);
-
     seq.loop = false;
     Tone.Transport.bpm.value = 80;
 
@@ -334,7 +331,6 @@ function Inner() {
     const getScaleValue: string = e.target.value;
     const getCurrentScaleTypes: scaleTypes = getScaleTypes(getScaleValue);
     const getScaleName: string = e.target.dataset.scaleName;
-    console.log('getScaleName', getScaleName);
     setScaleValue(getCurrentScaleTypes.scaleValue);
     setScaleKeys(getCurrentScaleTypes.scaleKeys.join(', '));
     setScaleName(getScaleName);

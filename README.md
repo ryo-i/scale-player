@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- スケールタイプの紐付けを日本語から英数字に変更 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- scaleTypeButtonsのキーの順番変更など [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
