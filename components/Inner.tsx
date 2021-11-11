@@ -398,6 +398,15 @@ function Inner() {
                 )}
               </dd>
             </dl>
+            <dl id="harmonic_minor_scale">
+              <dt>ハーモニック・マイナー・スケール</dt>
+              <dd>
+                {inner.scaleTypeButtons.harmonicMinorScale.map((val: scaleTypeButtons) =>
+                  <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
+                )}
+              </dd>
+            </dl>
           </div>
         </div>
       </CoadPlayer>
