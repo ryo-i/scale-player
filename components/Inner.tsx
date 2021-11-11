@@ -380,10 +380,19 @@ function Inner() {
                 )}
               </dd>
             </dl>
-            <dl id="church_mode">
+            <dl id="major_scale">
               <dt>メジャー・スケール（チャーチ・モード）</dt>
               <dd>
-                {inner.scaleTypeButtons.churchMode.map((val: scaleTypeButtons) =>
+                {inner.scaleTypeButtons.majorScale.map((val: scaleTypeButtons) =>
+                  <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
+                )}
+              </dd>
+            </dl>
+            <dl id="natural_minor_scale">
+              <dt>ナチュラル・マイナー・スケール</dt>
+              <dd>
+                {inner.scaleTypeButtons.naturalMinorScale.map((val: scaleTypeButtons) =>
                   <label key={val.className}><input key={val.className} type="radio" className={val.className} name="scale_type" value={val.scaleValue} onChange={scaleTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.scaleValue}</label>
                 )}

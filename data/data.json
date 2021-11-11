@@ -130,7 +130,7 @@
             "className": "melodic_minor_scale"
           }
         ],
-        "churchMode": [
+        "majorScale": [
           {
             "scaleValue": "アイオニアン・スケール",
             "className": "ionian_scale"
@@ -158,6 +158,36 @@
           {
             "scaleValue": "ロクリアン・スケール",
             "className": "locrian_scale"
+          }
+        ],
+        "naturalMinorScale": [
+          {
+            "scaleValue": "エオリアン・スケール",
+            "className": "aeolian_scale"
+          },
+          {
+            "scaleValue": "ロクリアン・スケール",
+            "className": "locrian_scale"
+          },
+          {
+            "scaleValue": "アイオニアン・スケール",
+            "className": "ionian_scale"
+          },
+          {
+            "scaleValue": "ドリアン・スケール",
+            "className": "dorian_scale"
+          },
+          {
+            "scaleValue": "フリジアン・スケール",
+            "className": "phrigian_scale"
+          },
+          {
+            "scaleValue": "リディアン・スケール",
+            "className": "lydian_scale"
+          },
+          {
+            "scaleValue": "ミクソリディアン・スケール",
+            "className": "mixolydian_scale"
           }
         ]
       }
