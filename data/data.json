@@ -110,12 +110,36 @@
             "scaleKeys": [1, 2, 5, 6, 8, 9, 11, 13]
           },
           {
-            "scaleValue": "lydian_n2_scale",
+            "scaleValue": "lydian_s2_scale",
             "scaleKeys": [1, 4, 5, 7, 8, 10, 12, 13]
           },
           {
             "scaleValue": "super_locrian_f7_scale",
             "scaleKeys": [1, 2, 4, 5, 7, 9, 10, 13]
+          },
+          {
+            "scaleValue": "dorian_f2_scale",
+            "scaleKeys": [1, 2, 4, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "lydian_s5_scale",
+            "scaleKeys": [1, 3, 5, 7, 9, 10, 12, 13]
+          },
+          {
+            "scaleValue": "lydian_f7_scale",
+            "scaleKeys": [1, 3, 5, 7, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "mixolydian_f6_scale",
+            "scaleKeys": [1, 3, 5, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "aeolian_f5_scale",
+            "scaleKeys": [1, 3, 4, 6, 7, 9, 11, 13]
+          },
+          {
+            "scaleValue": "locrian_f4_scale",
+            "scaleKeys": [1, 2, 4, 5, 7, 9, 11, 13]
           }
       ],
       "keyTypeButtons": [
@@ -234,12 +258,42 @@
             "scaleName": "フリジアン・メジャー・スケール"
           },
           {
-            "scaleValue": "lydian_n2_scale",
+            "scaleValue": "lydian_s2_scale",
             "scaleName": "リディアン♯2・スケール"
           },
           {
             "scaleValue": "super_locrian_f7_scale",
             "scaleName": "スーパー・ロクリアン♭7・スケール"
+          }
+        ],
+        "melodicMinorScale": [
+          {
+            "scaleValue": "melodic_minor_scale",
+            "scaleName": "メロディック・マイナー・スケール"
+          },
+          {
+            "scaleValue": "dorian_f2_scale",
+            "scaleName": "ドリアン♭2・スケール"
+          },
+          {
+            "scaleValue": "lydian_s5_scale",
+            "scaleName": "リディアン♯5・スケール"
+          },
+          {
+            "scaleValue": "lydian_f7_scale",
+            "scaleName": "リディアン♭7・スケール"
+          },
+          {
+            "scaleValue": "mixolydian_f6_scale",
+            "scaleName": "ミクソリディアン♭6・スケール"
+          },
+          {
+            "scaleValue": "aeolian_f5_scale",
+            "scaleName": "エオリアン♭5・スケール"
+          },
+          {
+            "scaleValue": "locrian_f4_scale",
+            "scaleName": "ロクリアン♭4・スケール"
           }
         ]
       }

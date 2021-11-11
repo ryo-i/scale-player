@@ -99,22 +99,21 @@ const CoadPlayer = styled.div`
     padding: 10px 10px 0;
     text-align: left;
     dl {
-      padding: 5px 0 0;
-      display: flex;
+      padding: 7px 0 7px;
       margin: 0;
       &:not(:last-child) {
         border-bottom: 1px solid #eee;
       }
       dt {
         font-weight: bold;
-        width: 15%;
+        margin: 0 0 5px;
       }
       dd {
         margin: 0;
         display: inline-block;
-        width: 85%;
+        font-size: 12px;
         label {
-          margin: 0 10px 10px 0;
+          margin: 0 10px 7px 0;
           display: inline-block;
           &:hover {
             opacity: 0.8;
@@ -402,6 +401,15 @@ function Inner() {
               <dt>ハーモニック・マイナー・スケール</dt>
               <dd>
                 {inner.scaleTypeButtons.harmonicMinorScale.map((val: scaleTypeButtons) =>
+                  <label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
+                )}
+              </dd>
+            </dl>
+            <dl id="melodic_minor_scale">
+              <dt>メロディック・マイナー・スケール</dt>
+              <dd>
+                {inner.scaleTypeButtons.melodicMinorScale.map((val: scaleTypeButtons) =>
                   <label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
                   defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
                 )}
