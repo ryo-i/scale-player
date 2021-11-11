@@ -130,6 +130,16 @@ const CoadPlayer = styled.div`
       }
     }
   }
+
+  #scale_types {
+    dl {
+      dd {
+        @media (max-width: 400px) {
+          display: block;
+        }
+      }
+    }
+  }
 `;
 
 
@@ -361,59 +371,47 @@ function Inner() {
           <div id="key_types">
             <dl id="root">
               <dt>キー</dt>
-              <dd>
-                {inner.keyTypeButtons.map((val: keyTypeButtons) =>
-                  <label key={val.value} className={val.className}><input key={val.value} type="radio" name="key_type" value={val.value} onChange={keyTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label>
-                )}
-              </dd>
+              {inner.keyTypeButtons.map((val: keyTypeButtons) =>
+                <dd><label key={val.value} className={val.className}><input key={val.value} type="radio" name="key_type" value={val.value} onChange={keyTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.keyTypeName}</label></dd>
+              )}
             </dl>
           </div>
           <div id="scale_types">
             <dl id="basic_scale">
               <dt>基本スケール</dt>
-              <dd>
-                {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
-                  <label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
-                )}
-              </dd>
+              {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
             </dl>
             <dl id="major_scale">
               <dt>メジャー・スケール（チャーチ・モード）</dt>
-              <dd>
-                {inner.scaleTypeButtons.majorScale.map((val: scaleTypeButtons) =>
-                  <label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
-                )}
-              </dd>
+              {inner.scaleTypeButtons.majorScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
             </dl>
             <dl id="natural_minor_scale">
               <dt>ナチュラル・マイナー・スケール</dt>
-              <dd>
-                {inner.scaleTypeButtons.naturalMinorScale.map((val: scaleTypeButtons) =>
-                  <label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
-                )}
-              </dd>
+              {inner.scaleTypeButtons.naturalMinorScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
             </dl>
             <dl id="harmonic_minor_scale">
               <dt>ハーモニック・マイナー・スケール</dt>
-              <dd>
                 {inner.scaleTypeButtons.harmonicMinorScale.map((val: scaleTypeButtons) =>
-                  <label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
+                  <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
                 )}
-              </dd>
             </dl>
             <dl id="melodic_minor_scale">
               <dt>メロディック・マイナー・スケール</dt>
-              <dd>
-                {inner.scaleTypeButtons.melodicMinorScale.map((val: scaleTypeButtons) =>
-                  <label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label>
-                )}
-              </dd>
+              {inner.scaleTypeButtons.melodicMinorScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
             </dl>
           </div>
         </div>
