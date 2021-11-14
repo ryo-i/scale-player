@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- 日本の音階（明治以降）を追加 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- インドネシアの音階を追加 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
