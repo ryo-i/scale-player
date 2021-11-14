@@ -462,6 +462,13 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
+            <dl id="modern_japanese_scale">
+              <dt>日本の音階（明治以降）</dt>
+              {inner.scaleTypeButtons.modernJapaneseScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
+            </dl>
           </div>
         </div>
       </CoadPlayer>
