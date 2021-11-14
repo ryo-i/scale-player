@@ -106,7 +106,7 @@
             "scaleKeys": [1, 3, 4, 7, 8, 10, 11, 13]
           },
           {
-            "scaleValue": "phrigian_major_scale",
+            "scaleValue": "harmonic_minor_perfect_5th_below_scale",
             "scaleKeys": [1, 2, 5, 6, 8, 9, 11, 13]
           },
           {
@@ -140,6 +140,26 @@
           {
             "scaleValue": "locrian_f4_scale",
             "scaleKeys": [1, 2, 4, 5, 7, 9, 11, 13]
+          },
+          {
+            "scaleValue": "whole_tone_scale",
+            "scaleKeys": [1, 3, 5, 7, 9, 11, 13]
+          },
+          {
+            "scaleValue": "diminished_scale",
+            "scaleKeys": [1, 3, 4, 6, 7, 9, 10, 12, 13]
+          },
+          {
+            "scaleValue": "combination_of_diminished_scale",
+            "scaleKeys": [1, 2, 4, 5, 7, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "chromatic_scale",
+            "scaleKeys": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+          },
+          {
+            "scaleValue": "symmetric_augment_scale",
+            "scaleKeys": [1, 4, 5, 8, 9, 12, 13]
           }
       ],
       "keyTypeButtons": [
@@ -254,8 +274,8 @@
             "scaleName": "ドリアン♯4・スケール"
           },
           {
-            "scaleValue": "phrigian_major_scale",
-            "scaleName": "フリジアン・メジャー・スケール"
+            "scaleValue": "harmonic_minor_perfect_5th_below_scale",
+            "scaleName": "ハーモニック・マイナー・パーフェクト5th・ビロウ・スケール"
           },
           {
             "scaleValue": "lydian_s2_scale",
@@ -294,6 +314,28 @@
           {
             "scaleValue": "locrian_f4_scale",
             "scaleName": "ロクリアン♭4・スケール"
+          }
+        ],
+        "symmetricalScale" :[
+          {
+            "scaleValue": "whole_tone_scale",
+            "scaleName": "ホールトーン・スケール"
+          },
+          {
+            "scaleValue": "diminished_scale",
+            "scaleName": "ディミニッシュト・スケール"
+          },
+          {
+            "scaleValue": "combination_of_diminished_scale",
+            "scaleName": "コンビネーション・オブ・ディミニッシュト・スケール"
+          },
+          {
+            "scaleValue": "chromatic_scale",
+            "scaleName": "クロマティック・スケール"
+          },
+          {
+            "scaleValue": "symmetric_augment_scale",
+            "scaleName": "シンメトリック・オーギュメント・スケール"
           }
         ]
       }
