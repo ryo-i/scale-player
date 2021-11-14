@@ -196,6 +196,50 @@
           {
             "scaleValue": "spanish_8note_scale",
             "scaleKeys": [1, 2, 4, 5, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_last",
+            "scaleKeys": [1, 3, 4, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_naharwand",
+            "scaleKeys": [1, 3, 4, 6, 8, 9, 12, 13]
+          },
+          {
+            "scaleValue": "maqam_nawasal",
+            "scaleKeys": [1, 3, 4, 7, 8, 9, 12, 13]
+          },
+          {
+            "scaleValue": "maqam_nagries",
+            "scaleKeys": [1, 3, 4, 7, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_hijazkar",
+            "scaleKeys": [1, 2, 5, 6, 8, 9, 12, 13]
+          },
+          {
+            "scaleValue": "maqam_bayati",
+            "scaleKeys": [1, 2, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_subur",
+            "scaleKeys": [1, 2, 4, 5, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_higerzi",
+            "scaleKeys": [1, 2, 5, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "maqam_kurdy",
+            "scaleKeys": [1, 2, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "makam_sika",
+            "scaleKeys": [1, 3, 5, 7, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "maqam_fusam",
+            "scaleKeys": [1, 3, 5, 6, 9, 10, 12, 13]
           }
       ],
       "keyTypeButtons": [
@@ -412,6 +456,52 @@
           {
             "scaleValue": "spanish_8note_scale",
             "scaleName": "スパニッシュ・8ノート・スケール"
+          }
+         ],
+         "arabScale": [
+          {
+            "scaleValue": "maqam_last",
+            "scaleName": "マカーム・ラースト"
+          },
+          {
+            "scaleValue": "maqam_naharwand",
+            "scaleName": "マカーム・ナハーワンド"
+          },
+          {
+            "scaleValue": "maqam_nawasal",
+            "scaleName": "マカーム・ナワサル"
+          },
+          {
+            "scaleValue": "maqam_nagries",
+            "scaleName": "マカーム・ナグリーズ"
+          },
+          {
+            "scaleValue": "maqam_hijazkar",
+            "scaleName": "マカーム・ヒジャーズカル"
+          },
+          {
+            "scaleValue": "maqam_bayati",
+            "scaleName": "マカーム・バヤーティー"
+          },
+          {
+            "scaleValue": "maqam_subur",
+            "scaleName": "マカーム・サバー"
+          },
+          {
+            "scaleValue": "maqam_higerzi",
+            "scaleName": "マカーム・ヒジャーズィー"
+          },
+          {
+            "scaleValue": "maqam_kurdy",
+            "scaleName": "マカーム・クルディー"
+          },
+          {
+            "scaleValue": "makam_sika",
+            "scaleName": "マカーム・スィカ"
+          },
+          {
+            "scaleValue": "maqam_fusam",
+            "scaleName": "マカーム・フザム"
           }
          ]
       }
