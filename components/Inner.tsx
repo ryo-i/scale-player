@@ -427,6 +427,13 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
+            <dl id="european_scale">
+              <dt>ヨーロッパの音階</dt>
+              {inner.scaleTypeButtons.europeanScale.map((val: scaleTypeButtons) =>
+                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+              )}
+            </dl>
           </div>
         </div>
       </CoadPlayer>
