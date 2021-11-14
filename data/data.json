@@ -240,6 +240,46 @@
           {
             "scaleValue": "maqam_fusam",
             "scaleKeys": [1, 3, 5, 6, 9, 10, 12, 13]
+          },
+          {
+            "scaleValue": "villaval_tart",
+            "scaleKeys": [1, 3, 5, 6, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "khamaj_tart",
+            "scaleKeys": [1, 3, 5, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "carfy_tart",
+            "scaleKeys": [1, 3, 4, 6, 8, 10, 11, 13]
+          },
+          {
+            "scaleValue": "asawari_tart",
+            "scaleKeys": [1, 3, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "by_love_tart",
+            "scaleKeys": [1, 2, 5, 6, 8, 9, 12, 13]
+          },
+          {
+            "scaleValue": "bairavi_tart",
+            "scaleKeys": [1, 2, 4, 6, 8, 9, 11, 13]
+          },
+          {
+            "scaleValue": "kalyan_tart",
+            "scaleKeys": [1, 3, 5, 7, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "malwa_tart",
+            "scaleKeys": [1, 2, 5, 7, 8, 10, 12, 13]
+          },
+          {
+            "scaleValue": "pool_vee_tart",
+            "scaleKeys": [1, 2, 5, 7, 8, 9, 12, 13]
+          },
+          {
+            "scaleValue": "toadie_tart",
+            "scaleKeys": [1, 2, 4, 7, 8, 9, 12, 13]
           }
       ],
       "keyTypeButtons": [
@@ -502,6 +542,48 @@
           {
             "scaleValue": "maqam_fusam",
             "scaleName": "マカーム・フザム"
+          }
+         ],
+         "indianScale": [
+          {
+            "scaleValue": "villaval_tart",
+            "scaleName": "ビラーヴァル・タート"
+          },
+          {
+            "scaleValue": "khamaj_tart",
+            "scaleName": "カマージ・タート"
+          },
+          {
+            "scaleValue": "carfy_tart",
+            "scaleName": "カーフィー・タート"
+          },
+          {
+            "scaleValue": "asawari_tart",
+            "scaleName": "アサーワリー・タート"
+          },
+          {
+            "scaleValue": "by_love_tart",
+            "scaleName": "バイラヴ・タート"
+          },
+          {
+            "scaleValue": "bairavi_tart",
+            "scaleName": "バイラヴィ・タート"
+          },
+          {
+            "scaleValue": "kalyan_tart",
+            "scaleName": "カリヤーン・タート"
+          },
+          {
+            "scaleValue": "malwa_tart",
+            "scaleName": "マールワー・タート"
+          },
+          {
+            "scaleValue": "pool_vee_tart",
+            "scaleName": "プールヴィー・タート"
+          },
+          {
+            "scaleValue": "toadie_tart",
+            "scaleName": "トーディー・タート"
           }
          ]
       }
