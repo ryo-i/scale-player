@@ -90,8 +90,22 @@ const CoadPlayer = styled.div`
     }
   }
 
+  #scale_menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
   #key_types,
-  #scale_types {
+  .scale_types {
     margin: 0 auto 10px;
     max-width: 700px;
     border: 1px solid #eee;
@@ -131,7 +145,7 @@ const CoadPlayer = styled.div`
     }
   }
 
-  #scale_types {
+  .scale_types {
     dl {
       dd {
         @media (max-width: 400px) {
@@ -377,7 +391,16 @@ function Inner() {
               )}
             </dl>
           </div>
-          <div id="scale_types">
+          <nav id="scale_menu">
+            <ul>
+              <li><a href="#tonality">調性に基づく音階</a></li>
+              <li><a href="#europe_america">ヨーロッパ・アメリカ</a></li>
+              <li><a href="#west_south_asia">西アジア・南アジア</a></li>
+              <li><a href="#east_southeast_asia">東アジア・東南アジア</a></li>
+            </ul>
+          </nav>
+          <section id="tonality" className="scale_types">
+            <h3>調性に基づく音階</h3>
             <dl id="basic_scale">
               <dt>基本スケール</dt>
               {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
@@ -413,6 +436,9 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
+          </section>
+          <section id="europe_america" className="scale_types">
+            <h3>ヨーロッパ・アメリカの音階</h3>
             <dl id="symmetrical_scale">
               <dt>シンメトリカル・スケール</dt>
               {inner.scaleTypeButtons.symmetricalScale.map((val: scaleTypeButtons) =>
@@ -434,6 +460,9 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
+          </section>
+          <section id="west_south_asia" className="scale_types">
+          <h3>西アジア・南アジアの音階</h3>
             <dl id="arab_scale">
               <dt>アラブの音階</dt>
               {inner.scaleTypeButtons.arabScale.map((val: scaleTypeButtons) =>
@@ -448,6 +477,9 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
+          </section>
+          <section id="east_southeast_asia" className="scale_types">
+            <h3>東アジア・東南アジア</h3>
             <dl id="chinese_scale">
               <dt>中国の音階</dt>
               {inner.scaleTypeButtons.chineseScale.map((val: scaleTypeButtons) =>
@@ -476,7 +508,7 @@ function Inner() {
                 defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
               )}
             </dl>
-          </div>
+          </section>
         </div>
       </CoadPlayer>
     </>
