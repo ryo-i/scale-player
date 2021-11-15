@@ -91,6 +91,8 @@ const CoadPlayer = styled.div`
   }
 
   #scale_menu {
+    margin: 0 auto 10px;
+    max-width: 700px;
     ul {
       list-style: none;
       padding: 0;
