@@ -38,7 +38,7 @@ function Header() {
           <span>MENU:</span>
           <Link href="/"><a>Home</a></Link>
           <Link href="/about"><a>About</a></Link>
-          <Link href="/chord_type"><a>Chord Type</a></Link>
+          <Link href="/scale_type"><a>Scale Type</a></Link>
         </nav>
       </div>
     </HeaderTag>
