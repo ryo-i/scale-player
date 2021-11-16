@@ -92,7 +92,7 @@ function About() {
                     </figure>
                     <p>タブを切り替えるとさらに別の種類のスケールが表示されます。画面は「東アジア・東南アジア」タブの中にある「琉球音階」です。</p>
                     <figure>
-                        <img src="img/use_04.jpg" alt="琉球音階（C）" />
+                        <img src="img/use_05.jpg" alt="琉球音階（C）" />
                     </figure>
                     <p>※スケールの詳細についてはこちらを参照→<a href="/scale_type">スケール一覧</a></p>
                 </section>
