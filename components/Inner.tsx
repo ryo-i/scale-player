@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef }  from 'react';
 import styled from 'styled-components';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import { inner } from '../data/data.json';
 import * as Tone from 'tone';
 
@@ -91,23 +93,26 @@ const CoadPlayer = styled.div`
   }
 
   #scale_menu {
-    margin: 0 auto 10px;
+    margin: 0 auto;
     max-width: 700px;
-    ul {
-      list-style: none;
-      padding: 0;
-      li {
-        display: inline-block;
-        margin: 0 10px 0 0;
-        a {
-          color: #fff;
+    .react-tabs__tab-list {
+      margin: 0 0 5px;
+      border: none;
+      font-size: 12px;
+      .react-tabs__tab {
+        margin: 0 5px 5px 0;
+        border: 1px solid #333;
+        background: #666;
+        border-radius: 5px;
+        &--selected {
+          background: #fff;
         }
       }
     }
   }
 
   #key_types,
-  .scale_types {
+  .scale_type {
     margin: 0 auto 10px;
     max-width: 700px;
     border: 1px solid #eee;
@@ -147,7 +152,7 @@ const CoadPlayer = styled.div`
     }
   }
 
-  .scale_types {
+  .scale_type {
     dl {
       dd {
         @media (max-width: 400px) {
@@ -172,6 +177,7 @@ function Inner() {
   const [scaleKeys, setScaleKeys] = useState(inner.scaleTypes[0].scaleKeys.join(', '));
   const [scaleName, setScaleName] = useState(inner.scaleTypeButtons.basicScale[0].scaleName);
   const keyElement = useRef<HTMLInputElement>(null);
+  const scaleTypeElement = useRef<HTMLInputElement>(null);
 
 
   // オブジェクト設定
@@ -380,9 +386,9 @@ function Inner() {
         </div>
         <div id="scale_type">
           <section id="scale_text">
-            <h2 id="scale_type">{scaleName}（{keyType}）</h2>
+            <h2 id="scale_name">{scaleName}（{keyType}）</h2>
             <p id="scale_keys">構成音：{scaleKeys}</p>
-            <p id="scale_name"><button value="start" className="start_button" onClick={changeScalePlay}>▶︎</button>音階：{scaleInterval}</p>
+            <p id="scale_interval"><button value="start" className="start_button" onClick={changeScalePlay}>▶︎</button>音階：{scaleInterval}</p>
           </section>
           <div id="key_types">
             <dl id="root">
@@ -393,124 +399,137 @@ function Inner() {
               )}
             </dl>
           </div>
-          <nav id="scale_menu">
-            <ul>
-              <li><a href="#tonality">調性に基づく音階</a></li>
-              <li><a href="#europe_america">ヨーロッパ・アメリカ</a></li>
-              <li><a href="#west_south_asia">西アジア・南アジア</a></li>
-              <li><a href="#east_southeast_asia">東アジア・東南アジア</a></li>
-            </ul>
-          </nav>
-          <section id="tonality" className="scale_types">
-            <h3>調性に基づく音階</h3>
-            <dl id="basic_scale">
-              <dt>基本スケール</dt>
-              {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="major_scale">
-              <dt>メジャー・スケール（チャーチ・モード）</dt>
-              {inner.scaleTypeButtons.majorScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="natural_minor_scale">
-              <dt>ナチュラル・マイナー・スケール</dt>
-              {inner.scaleTypeButtons.naturalMinorScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="harmonic_minor_scale">
-              <dt>ハーモニック・マイナー・スケール</dt>
-                {inner.scaleTypeButtons.harmonicMinorScale.map((val: scaleTypeButtons) =>
-                  <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                  defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-                )}
-            </dl>
-            <dl id="melodic_minor_scale">
-              <dt>メロディック・マイナー・スケール</dt>
-              {inner.scaleTypeButtons.melodicMinorScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-          </section>
-          <section id="europe_america" className="scale_types">
-            <h3>ヨーロッパ・アメリカの音階</h3>
-            <dl id="symmetrical_scale">
-              <dt>シンメトリカル・スケール</dt>
-              {inner.scaleTypeButtons.symmetricalScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="pentatonic_blue_note_scale">
-              <dt>ペンタトニック/ブルー・ノート・スケール</dt>
-              {inner.scaleTypeButtons.pentatonicBlueNoteScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="european_scale">
-              <dt>ヨーロッパの音階</dt>
-              {inner.scaleTypeButtons.europeanScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-          </section>
-          <section id="west_south_asia" className="scale_types">
-          <h3>西アジア・南アジアの音階</h3>
-            <dl id="arab_scale">
-              <dt>アラブの音階</dt>
-              {inner.scaleTypeButtons.arabScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="indian_scale">
-              <dt>インドの音階</dt>
-              {inner.scaleTypeButtons.indianScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-          </section>
-          <section id="east_southeast_asia" className="scale_types">
-            <h3>東アジア・東南アジア</h3>
-            <dl id="chinese_scale">
-              <dt>中国の音階</dt>
-              {inner.scaleTypeButtons.chineseScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="classical_japanese_scale">
-              <dt>日本の音階（古典邦楽）</dt>
-              {inner.scaleTypeButtons.classicalJapaneseScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="modern_japanese_scale">
-              <dt>日本の音階（明治以降）</dt>
-              {inner.scaleTypeButtons.modernJapaneseScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-            <dl id="indonesian_scale">
-              <dt>インドネシアの音階</dt>
-              {inner.scaleTypeButtons.indonesianScale.map((val: scaleTypeButtons) =>
-                <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
-                defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
-              )}
-            </dl>
-          </section>
+
+          <Tabs>
+            <nav  id="scale_menu">
+              <TabList>
+                  <Tab>調性に基づく音階</Tab>
+                  <Tab>ヨーロッパ・アメリカ</Tab>
+                  <Tab>西アジア・南アジア</Tab>
+                  <Tab>東アジア・東南アジア</Tab>
+              </TabList>
+            </nav>
+            <div id="scale_types">
+              <TabPanel>
+                <section id="tonality" className="scale_type">
+                  <h3>調性に基づく音階</h3>
+                  <dl id="basic_scale">
+                    <dt>基本スケール</dt>
+                    {inner.scaleTypeButtons.basicScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="major_scale">
+                    <dt>メジャー・スケール（チャーチ・モード）</dt>
+                    {inner.scaleTypeButtons.majorScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="natural_minor_scale">
+                    <dt>ナチュラル・マイナー・スケール</dt>
+                    {inner.scaleTypeButtons.naturalMinorScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleValue}><input key={val.scaleValue} type="radio" name="scale_type" value={val.scaleValue} data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="harmonic_minor_scale">
+                    <dt>ハーモニック・マイナー・スケール</dt>
+                      {inner.scaleTypeButtons.harmonicMinorScale.map((val: scaleTypeButtons) =>
+                        <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                        defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                      )}
+                  </dl>
+                  <dl id="melodic_minor_scale">
+                    <dt>メロディック・マイナー・スケール</dt>
+                    {inner.scaleTypeButtons.melodicMinorScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                </section>
+              </TabPanel>
+              <TabPanel>
+                <section id="europe_america" className="scale_type">
+                  <h3>ヨーロッパ・アメリカの音階</h3>
+                  <dl id="symmetrical_scale">
+                    <dt>シンメトリカル・スケール</dt>
+                    {inner.scaleTypeButtons.symmetricalScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="pentatonic_blue_note_scale">
+                    <dt>ペンタトニック/ブルー・ノート・スケール</dt>
+                    {inner.scaleTypeButtons.pentatonicBlueNoteScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="european_scale">
+                    <dt>ヨーロッパの音階</dt>
+                    {inner.scaleTypeButtons.europeanScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                </section>
+              </TabPanel>
+              <TabPanel>
+                <section id="west_south_asia" className="scale_type">
+                <h3>西アジア・南アジアの音階</h3>
+                  <dl id="arab_scale">
+                    <dt>アラブの音階</dt>
+                    {inner.scaleTypeButtons.arabScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="indian_scale">
+                    <dt>インドの音階</dt>
+                    {inner.scaleTypeButtons.indianScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                </section>
+              </TabPanel>
+              <TabPanel>
+                <section id="east_southeast_asia" className="scale_type">
+                  <h3>東アジア・東南アジア</h3>
+                  <dl id="chinese_scale">
+                    <dt>中国の音階</dt>
+                    {inner.scaleTypeButtons.chineseScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="classical_japanese_scale">
+                    <dt>日本の音階（古典邦楽）</dt>
+                    {inner.scaleTypeButtons.classicalJapaneseScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="modern_japanese_scale">
+                    <dt>日本の音階（明治以降）</dt>
+                    {inner.scaleTypeButtons.modernJapaneseScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                  <dl id="indonesian_scale">
+                    <dt>インドネシアの音階</dt>
+                    {inner.scaleTypeButtons.indonesianScale.map((val: scaleTypeButtons) =>
+                      <dd><label key={val.scaleName}><input key={val.scaleName} type="radio" name="scale_type" value={val.scaleValue}  data-scale-name={val.scaleName} onChange={scaleTypeSelect}
+                      defaultChecked={val.defaultChecked || null} />{val.scaleName}</label></dd>
+                    )}
+                  </dl>
+                </section>
+              </TabPanel>
+            </div>
+          </Tabs>
         </div>
       </CoadPlayer>
     </>
