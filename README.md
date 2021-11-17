@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- 写真の指定が間違えていたので変更 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- スケール一覧の構成を作成 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）

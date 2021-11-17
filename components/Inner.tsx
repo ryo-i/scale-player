@@ -497,7 +497,7 @@ function Inner() {
               </TabPanel>
               <TabPanel>
                 <section id="east_southeast_asia" className="scale_type">
-                  <h3>東アジア・東南アジア</h3>
+                  <h3>東アジア・東南アジアの音階</h3>
                   <dl id="chinese_scale">
                     <dt>中国の音階</dt>
                     {inner.scaleTypeButtons.chineseScale.map((val: scaleTypeButtons) =>
