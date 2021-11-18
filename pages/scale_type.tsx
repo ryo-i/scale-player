@@ -99,50 +99,91 @@ function About() {
                     <section>
                         <h3 id="basic_scale">基本スケール</h3>
                         <dl>
-                            <dt>xxx</dt>
+                            <dt>メジャー・スケール</dt>
                             <dd>
-                                <p>xxx</p>
+                                <p>構成音：1, 3, 5, 6, 8, 10, 12, 13<br />
+                                    キーがCの場合、全ての音階が白鍵になる。</p>
                                 <figure>
-                                    <img src="img/xxx.jpg" alt="xxx" />
+                                    <img src="img/scale_01.jpg" alt="メジャー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ナチュラル・マイナー・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 6, 8, 9, 11, 13<br />
+                                    3、6、7度（キーがCの場合ミ、ラ、シ）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_02.jpg" alt="ナチュラル・マイナー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ハーモニック・マイナー・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 6, 8, 9, 12, 13<br />
+                                    3、6度（キーがCの場合ミ、ラ）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_03.jpg" alt="ハーモニック・マイナー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>メロディック・マイナー・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 6, 8, 10, 12, 13<br />
+                                    3度（キーがCの場合ミ）のみが半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_04.jpg" alt="メロディック・マイナー・スケール" />
                                 </figure>
                             </dd>
                         </dl>
                     </section>
                     <section>
                         <h3 id="major_scale">メジャー・スケール（チャーチ・モード）</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="natural_minor_scale">ナチュラル・マイナー・スケール</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="harmonic_minor_scale">ハーモニック・マイナー・スケール</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="melodic_minor_scale">メロディック・マイナー・スケール</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                 </section>
             </section>
@@ -152,30 +193,42 @@ function About() {
                 <section>
                     <section>
                         <h3 id="symmetrical_scale">シンメトリカル・スケール</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="pentatonic_blue_note_scale">ペンタトニック/ブルー・ノート・スケール</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="european_scale">ヨーロッパの音階</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                 </section>
             </section>
@@ -185,21 +238,29 @@ function About() {
                 <section>
                     <section>
                         <h3 id="arab_scale">アラブの音階</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="indian_scale">インドの音階</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                 </section>
             </section>
@@ -209,39 +270,55 @@ function About() {
                 <section>
                     <section>
                         <h3 id="chinese_scale">中国の音階</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="classical_japanese_scale">日本の音階（古典邦楽）</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="modern_japanese_scale">日本の音階（明治以降）</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                     <section>
                         <h3 id="indonesian_scale">インドネシアの音階</h3>
-                        <dd>
-                            <p>xxx</p>
-                            <figure>
-                                <img src="img/xxx.jpg" alt="xxx" />
-                            </figure>
-                        </dd>
+                        <dl>
+                            <dt>xxx・スケール</dt>
+                            <dd>
+                                <p>構成音：x, x, x, x, x, x, x, x<br />
+                                x、x、x度（キーがCの場合x、x、x）が半音下げ。</p>
+                                <figure>
+                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                </figure>
+                            </dd>
+                        </dl>
                     </section>
                 </section>
             </section>
