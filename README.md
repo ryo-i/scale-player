@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- スケール一覧に基本スケールを追加 [#3](https://github.com/ryo-i/scale-player/issues/3)
+- スケール一覧にナチュラル・マイナー・スケールを追加 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）
