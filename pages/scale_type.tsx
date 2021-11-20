@@ -8,7 +8,7 @@ import Data from '../data/data.json';
 
 const headerTitle = Data.header.title;
 const pageTitle = 'スケール一覧';
-const pageText = '本アプリで用意しているスケールの種類を一覧にしています。';
+const pageText = '本アプリで対象にしているスケールの種類を一覧にしています。';
 const headTitle = pageTitle + ' | ' + headerTitle;
 
 
@@ -52,8 +52,8 @@ function About() {
             <p dangerouslySetInnerHTML={{ __html: pageText }}></p>
             <section>
                 <h2 id="scale_genre">スケールの分類</h2>
-                <p>本アプリで扱うページはこちらのWikipediaページを対象にしました。</p>
-                <p>※参考：<a href="https://ja.wikipedia.org/wiki/%E9%9F%B3%E9%9A%8E">音階</a></p>
+                <p>本アプリで扱うスケールはこちらのWikipediaページを対象にしました。</p>
+                <p>※参考：<a href="https://ja.wikipedia.org/wiki/%E9%9F%B3%E9%9A%8E">音階 - Wikipedia</a></p>
                 <p>タブ切り替えを設定する際に内容とボリュームで検討した結果、以下の4種類に分類にしました（Wikipediaとは少し異なる構成）。</p>
                 <ul>
                     <li>
@@ -204,14 +204,62 @@ function About() {
                     </section>
                     <section>
                         <h3 id="natural_minor_scale">ナチュラル・マイナー・スケール</h3>
-                        <p>xxx</p>
+                        <p>メジャー・スケールの3度と6度と7度を半音下げたスケールだが、メジャースケールのAキー（ラ）から始めた構成音と同じになる（スケール名も同じ）。</p>
                         <dl>
-                            <dt>xxx・スケール</dt>
+                        <dt>エオリアン・スケール</dt>
                             <dd>
-                                <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 4, 6, 8, 9, 11, 13<br />
+                                3、６、7度（Cキーではミ、ラ、シ）がフラット。</p>
                                 <figure>
-                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_10_1.jpg" alt="エオリアン・スケール-1" />
+                                </figure>
+                            </dd>
+                            <dt>ロクリアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 4, 6, 7, 9, 11, 13<br />
+                                2、3、5、６、7度（Cキーではレ、ミ、ソ、ラ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_11_1.jpg" alt="ロクリアン・スケール-1" />
+                                </figure>
+                            </dd>
+                            <dt>アイオニアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 5, 6, 8, 10, 12, 13<br />
+                                基本スケールのメジャー・スケールはこのスケール。Cキーでは全て白鍵になる。</p>
+                                <figure>
+                                    <img src="img/scale_05.jpg" alt="アイオニアン・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ドリアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 6, 8, 10, 11, 13<br />
+                                3、7度（Cキーではミ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_06_1.jpg" alt="ドリアン・スケール-1" />
+                                </figure>
+                            </dd>
+                            <dt>フリジアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 4, 6, 8, 9, 11, 13<br />
+                                2、3、6、7度（Cキーではレ、ミ、ラ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_07_1.jpg" alt="フリジアン・スケール-1" />
+                                </figure>
+                            </dd>
+                            <dt>リディアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 5, 7, 8, 10, 12, 13<br />
+                                4度（Cキーではファ）がシャープ（半音上げ）。</p>
+                                <figure>
+                                    <img src="img/scale_08_1.jpg" alt="リディアン・スケール-1" />
+                                </figure>
+                            </dd>
+                            <dt>ミクソリディアン・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 5, 6, 8, 10, 11, 13<br />
+                                7度（Cキーではシ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_09_1.jpg" alt="ミクソリディアン・スケール-1" />
                                 </figure>
                             </dd>
                         </dl>
