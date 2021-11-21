@@ -463,7 +463,7 @@ function About() {
                             <dt>メジャー・ブルース・スケール</dt>
                             <dd>
                                 <p>構成音：1, 3, 4, 5, 8, 10, 13<br />
-                                1, 2, b3, 3, 5, 6度の六音音階。3度（Cキーではミ）がフラットだが、それとは別にナチュラルの3度（Cキーではミ）もある。</p>
+                                1, 2, b3, 3, 5, 6度の六音音階。メジャー・ペンタトニック・スケールに3度（Cキーではミ）のフラットの音を加えたスケール。</p>
                                 <figure>
                                     <img src="img/scale_2_08.jpg" alt="メジャー・ブルース・スケール" />
                                 </figure>
@@ -471,7 +471,7 @@ function About() {
                             <dt>マイナー・ブルース・スケール</dt>
                             <dd>
                                 <p>構成音：1, 4, 6, 7, 8, 11, 13<br />
-                                1, b3, 4, b5, 5, b7度の六音音階。3、5、7度（Cキーではミ、ソ、シ）がフラットだが、それとは別にナチュラルの5度（Cキーではソ）もある。</p>
+                                1, b3, 4, b5, 5, b7度の六音音階。マイナー・ペンタトニック・スケールに5度（Cキーではソ）のフラットを加えたスケール。</p>
                                 <figure>
                                     <img src="img/scale_2_09.jpg" alt="マイナー・ブルース・スケール" />
                                 </figure>
@@ -488,14 +488,38 @@ function About() {
                     </section>
                     <section>
                         <h3 id="european_scale">ヨーロッパの音階</h3>
-                        <p>xxx</p>
+                        <p>西洋音楽の中で調性の基づくスケールが生まれる以前から存在した民族音階。</p>
                         <dl>
-                            <dt>xxx・スケール</dt>
+                            <dt>ハンガリー・スケール</dt>
                             <dd>
-                                <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 4, 7, 8, 9, 12, 13<br />
+                                1, 2, b3, #4, 5, 6b, 7度の七音音階。ハーモニック・マイナー・スケールの4度（Cキーではファ）をシャープにしたスケール</p>
                                 <figure>
-                                    <img src="img/scale_2_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_2_11.jpg" alt="ハンガリー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ジプシー・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 5, 6, 8, 9, 12, 13<br />
+                                1, b2, 3, 4, 5, b6, 7度の七音音階。ハーモニック・マイナー・パーフェクト5th・ビロウ・スケールの7度（Cキーではシ）をナチュラルにしたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_2_12.jpg" alt="ジプシー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>スパニッシュ・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 5, 6, 8, 9, 11, 13<br />
+                                1, b2, 3, 4, 5, b6, b7度の七音音階。2、6、7度（Cキーではレ、ラ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_2_13.jpg" alt="スパニッシュ・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>スパニッシュ・8ノート・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 4, 5, 6, 8, 9, 11, 13<br />
+                                1, b2, b3, 3, 4, 5, b6, b7度の八音音階。スパニッシュ・スケールに3度（Cキーではミ）のフラットを加えたスケール。フリジアン・スケールに3度のナチュラルを加えたスケールでもある。</p>
+                                <figure>
+                                    <img src="img/scale_2_14.jpg" alt="スパニッシュ・8ノート・スケール" />
                                 </figure>
                             </dd>
                         </dl>
@@ -513,7 +537,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -527,7 +551,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -547,7 +571,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -561,7 +585,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -575,7 +599,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -589,7 +613,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
