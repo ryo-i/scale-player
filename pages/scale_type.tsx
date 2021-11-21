@@ -442,14 +442,46 @@ function About() {
                     </section>
                     <section>
                         <h3 id="pentatonic_blue_note_scale">ペンタトニック/ブルー・ノート・スケール</h3>
-                        <p>xxx</p>
+                        <p>ペンタトニックは数字の「5」を表す名前の通り五音音階。世界のさまざまな民族音階とも共通するスケール。そこから発展したブルース・スケール、ブルー・ノート・スケールもここでまとめる。</p>
                         <dl>
-                            <dt>xxx・スケール</dt>
+                            <dt>マイナー・ペンタトニック・スケール</dt>
                             <dd>
-                                <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                <p>構成音：1, 4, 6, 8, 11, 13<br />
+                                1, b3, 4, 5, b7度の五音音階。3、7度（Cキーではミ、シ）がフラット。</p>
                                 <figure>
-                                    <img src="img/scale_2_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_2_06.jpg" alt="マイナー・ペンタトニック・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>メジャー・ペンタトニック・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 5, 8, 10, 13<br />
+                                1, 2, 3, 5, 6度の五音音階。Cキーではすべてが白鍵になる。</p>
+                                <figure>
+                                    <img src="img/scale_2_07.jpg" alt="メジャー・ペンタトニック・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>メジャー・ブルース・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 5, 8, 10, 13<br />
+                                1, 2, b3, 3, 5, 6度の六音音階。3度（Cキーではミ）がフラットだが、それとは別にナチュラルの3度（Cキーではミ）もある。</p>
+                                <figure>
+                                    <img src="img/scale_2_08.jpg" alt="メジャー・ブルース・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>マイナー・ブルース・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 4, 6, 7, 8, 11, 13<br />
+                                1, b3, 4, b5, 5, b7度の六音音階。3、5、7度（Cキーではミ、ソ、シ）がフラットだが、それとは別にナチュラルの5度（Cキーではソ）もある。</p>
+                                <figure>
+                                    <img src="img/scale_2_09.jpg" alt="マイナー・ブルース・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ブルー・ノート・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13<br />
+                                1, 2, b3, 3, 4, b5, 5, 6, b7, 7度の十音音階。メジャー・スケールに3、5、7度（Cキーではミ、ソ、シ）のフラットを加えたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_2_10.jpg" alt="ブルー・ノート・スケール" />
                                 </figure>
                             </dd>
                         </dl>
@@ -461,7 +493,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_2_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -481,7 +513,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -495,7 +527,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -515,7 +547,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -529,7 +561,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -543,7 +575,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -557,7 +589,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                x, x, x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
                                 </figure>
