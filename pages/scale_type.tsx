@@ -204,7 +204,7 @@ function About() {
                     </section>
                     <section>
                         <h3 id="natural_minor_scale">ナチュラル・マイナー・スケール</h3>
-                        <p>メジャー・スケールの3度と6度と7度を半音下げたスケールだが、メジャースケールのAキー（ラ）から始めた構成音と同じになる（スケール名も同じ）。</p>
+                        <p>メジャー・スケールの3度、6度、7度を半音下げたスケールだが、メジャースケールのAキー（ラ）から始めた構成音と同じになる（スケール名も同じ）。</p>
                         <dl>
                         <dt>エオリアン・スケール</dt>
                             <dd>
@@ -266,14 +266,62 @@ function About() {
                     </section>
                     <section>
                         <h3 id="harmonic_minor_scale">ハーモニック・マイナー・スケール</h3>
-                        <p>xxx</p>
+                        <p>メジャー・スケールの3度、6度を半音下げたスケール（ナチュラル・マイナー・スケールの♭7度を半音上げたスケール）。</p>
                         <dl>
-                            <dt>xxx・スケール</dt>
+                            <dt>ハーモニック・マイナー・スケール</dt>
                             <dd>
-                                <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 4, 6, 8, 9, 12, 13<br />
+                                3、6度（Cキーではミ、ラ）がフラット。</p>
                                 <figure>
-                                    <img src="img/scale_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_03.jpg" alt="ハーモニック・マイナー・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ロクリアン♮6・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 4, 6, 7, 10, 11, 13<br />
+                                2、3、5、7度（Cキーではレ、ミ、ソ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_12.jpg" alt="ロクリアン♮6・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>アイオニアン♯5・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 5, 6, 9, 10, 12, 13<br />
+                                5度（Cキーではソ）がシャープ。</p>
+                                <figure>
+                                    <img src="img/scale_13.jpg" alt="アイオニアン♯5・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ドリアン♯4・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 3, 4, 7, 8, 10, 11, 13<br />
+                                3、7度（Cキーではミ、シ）がフラット、4度（Cキーではファ）がシャープ。</p>
+                                <figure>
+                                    <img src="img/scale_14.jpg" alt="ドリアン♯4・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>ハーモニック・マイナー・パーフェクト5th・ビロウ・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 5, 6, 8, 9, 11, 13<br />
+                                2、6、7度（Cキーではレ、ソ、シ）がフラット。</p>
+                                <figure>
+                                    <img src="img/scale_15.jpg" alt="ハーモニック・マイナー・パーフェクト5th・ビロウ・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>リディアン♯2・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 4, 5, 7, 8, 10, 12, 13<br />
+                                2、4度（Cキーではレ、ファ）がシャープ。</p>
+                                <figure>
+                                    <img src="img/scale_16.jpg" alt="リディアン♯2・スケール" />
+                                </figure>
+                            </dd>
+                            <dt>スーパー・ロクリアン♭7・スケール</dt>
+                            <dd>
+                                <p>構成音：1, 2, 4, 5, 7, 9, 10, 13<br />
+                                2、3、4、5、6度（Cキーではレ、ミ、ファ、ソ、ラ）がフラット、7度（Cキーではシ）がダブルフラット（全音下げ）。</p>
+                                <figure>
+                                    <img src="img/scale_17.jpg" alt="スーパー・ロクリアン♭7・スケール" />
                                 </figure>
                             </dd>
                         </dl>
@@ -285,7 +333,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -305,7 +353,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -319,7 +367,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -333,7 +381,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -353,7 +401,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -367,7 +415,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -387,7 +435,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -401,7 +449,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -415,7 +463,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
@@ -429,7 +477,7 @@ function About() {
                             <dt>xxx・スケール</dt>
                             <dd>
                                 <p>構成音：x, x, x, x, x, x, x, x<br />
-                                x、x、x度（キーがCの場合x、x、x）がフラット。</p>
+                                x、x、x度（Cキーではx、x、x）がフラット。</p>
                                 <figure>
                                     <img src="img/scale_xx.jpg" alt="xxx・スケール" />
                                 </figure>
