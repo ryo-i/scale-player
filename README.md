@@ -8,7 +8,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- アラブの音階の途中まで追加（残り2つ） [#3](https://github.com/ryo-i/scale-player/issues/3)
+- アラブの音階の残り2つを追加 [#3](https://github.com/ryo-i/scale-player/issues/3)
 - スケールの種類検討中 [#2](https://github.com/ryo-i/scale-player/issues/2)
 
 ## 詳細（ブログ）

@@ -606,20 +606,22 @@ function About() {
                                     <img src="img/scale_3_09.jpg" alt="マカーム・クルディー" />
                                 </figure>
                             </dd>
-                            <dt>xxx・スケール</dt>
+                            <dt>マカーム・スィカ</dt>
                             <dd>
-                                <p>構成音：x<br />
-                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 5, 7, 8, 10, 12, 13<br />
+                                1, 2, 3, 4#, 5, 6, 7度の七音音階。4度（Cキーではファ）がシャープ。本来はqEキーから始まりE（ミ）とB（シ）が1/4音下げ（qE, F, G, A, qB, C, D）のスケール。この1/4音下げを半音下げ（bE, F, G, A, bB, C, D）するとこの音程になる。</p>
                                 <figure>
-                                    <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_3_10_1.jpg" alt="マカーム・スィカ-1" />
+                                    <img src="img/scale_3_10_2.jpg" alt="マカーム・スィカ-2" />
                                 </figure>
                             </dd>
-                            <dt>xxx・スケール</dt>
+                            <dt>マカーム・フザム</dt>
                             <dd>
-                                <p>構成音：x<br />
-                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 5, 6, 9, 10, 12, 13<br />
+                                1, 2, 3, 4, 5#, 6, 7度の七音音階。5度（Cキーではソ）がシャープ。本来はqEキーから始まりE（ミ）が1/4音下げ、A（ラ）が半音下げ（qE, F, G, bA, B, C, D）のスケール。この1/4音下げを半音下げ（bE, F, G, bA, B, C, D）するとこの音程になる。</p>
                                 <figure>
-                                    <img src="img/scale_3_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_3_11_1.jpg" alt="マカーム・フザム" />
+                                    <img src="img/scale_3_11_2.jpg" alt="マカーム・フザム" />
                                 </figure>
                             </dd>
                         </dl>
