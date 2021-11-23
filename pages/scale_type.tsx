@@ -720,14 +720,50 @@ function About() {
                 <section>
                     <section>
                         <h3 id="chinese_scale">中国の音階</h3>
-                        <p>xxx</p>
+                        <p>中国の「調式（テャオシー）」といわれる音楽の音階。</p>
                         <dl>
-                            <dt>xxx・スケール</dt>
+                            <dt>宮調式</dt>
                             <dd>
-                                <p>構成音：x<br />
-                                x度のx音音階。x、x、x度（Cキーではx、x、x）がフラット。</p>
+                                <p>構成音：1, 3, 5, 8, 10, 13<br />
+                                1, 2, 3, 5, 6度の五音音階。Cキーではすべて白鍵。メジャー・ペンタトニック・スケールと同一のスケール。</p>
                                 <figure>
-                                    <img src="img/scale_4_xx.jpg" alt="xxx・スケール" />
+                                    <img src="img/scale_4_01.jpg" alt="宮調式" />
+                                </figure>
+                            </dd>
+                            <dt>商調式</dt>
+                            <dd>
+                                <p>構成音：1, 3, 6, 8, 11, 13<br />
+                                1, 2, 4, 5, b7度の五音音階。7度（Cキーではシ）がフラット。メジャー・ペンタトニック・スケールの第2音（Dキー）から始めたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_4_02_1.jpg" alt="商調式-1" />
+                                    <img src="img/scale_4_02_2.jpg" alt="商調式-2" />
+                                </figure>
+                            </dd>
+                            <dt>角調式</dt>
+                            <dd>
+                                <p>構成音：1, 4, 6, 9, 11, 13<br />
+                                1, b3, 4, b6, b7度の五音音階。3、6、7度（Cキーではミ、ラ、シ）がフラット。メジャー・ペンタトニック・スケールの第3音（Eキー）から始めたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_4_03_1.jpg" alt="角調式-1" />
+                                    <img src="img/scale_4_03_2.jpg" alt="角調式-2" />
+                                </figure>
+                            </dd>
+                            <dt>徴調式</dt>
+                            <dd>
+                                <p>構成音：1, 3, 6, 8, 10, 13<br />
+                                1, 2, 4, 5, 6度の五音音階。Cキーではすべて白鍵。Gキー（ソ）では全て白鍵になる。メジャー・ペンタトニック・スケールの第4音（Gキー）から始めたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_4_04_1.jpg" alt="徴調式-1" />
+                                    <img src="img/scale_4_04_2.jpg" alt="徴調式-2" />
+                                </figure>
+                            </dd>
+                            <dt>羽調式</dt>
+                            <dd>
+                                <p>構成音：1, 4, 6, 8, 11, 13<br />
+                                1, b3, 4, 5, b7度の五音音階。3、7度（Cキーではミ、ラ）がフラット。メジャー・ペンタトニック・スケールの第5音（Aキー）から始めたスケール。</p>
+                                <figure>
+                                    <img src="img/scale_4_05_1.jpg" alt="羽調式-1" />
+                                    <img src="img/scale_4_05_2.jpg" alt="羽調式-2" />
                                 </figure>
                             </dd>
                         </dl>
