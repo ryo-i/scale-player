@@ -299,7 +299,7 @@ function Inner() {
   // スケール取得
   const getScales = (scaleTypes: scaleTypes): string[][] => {
     let getScales: string[][] = [];
-    for (let i = 0 ; i < inner.keys.length; i++) {
+    for (let i = 0 ; i < inner.keyButtons.length; i++) {
       getScales.push([]);
       for (var  j = 0; j < scaleTypes['scaleKeys'].length; j++){
         const key: string = inner.scale[i+scaleTypes['scaleKeys'][j]];
