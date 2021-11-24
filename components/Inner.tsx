@@ -9,7 +9,7 @@ import * as Tone from 'tone';
 // CSS in JS
 const keyWidth = '37px'
 
-const CoadPlayer = styled.div`
+const ScalePlayer = styled.div`
   color: #fff;
   #key {
     max-width: calc(${keyWidth} * 15);
@@ -375,7 +375,7 @@ function Inner() {
   // JSX
   return (
     <>
-      <CoadPlayer>
+      <ScalePlayer>
         <div id="key">
           <div className="key_inner" ref={keyElement}>
             {inner.keyButtons.map((val: keyButtons) =>
@@ -531,7 +531,7 @@ function Inner() {
             </div>
           </Tabs>
         </div>
-      </CoadPlayer>
+      </ScalePlayer>
     </>
   );
 }
