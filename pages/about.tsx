@@ -98,6 +98,18 @@ function About() {
                 </section>
             </section>
             <section>
+                <h2>今後の課題</h2>
+                <p>アラブの音階は「四分音」という1/4を上下にズラした音程があったが、Tone.jsの音程はピアノの十二音音階だったため、再現するのはシンプルではなさそうだった。個別の音にピッチを変えるエフェクトを加えるなどの検討が必要。</p>
+                <ul>
+                    <li><a href="https://ja.wikipedia.org/wiki/音階#アラブの音階">アラブの音階</a></li>
+                    <li><a href="https://ja.wikipedia.org/wiki/マカーム">マカーム</a></li>
+                    <li><a href="https://ja.wikipedia.org/wiki/四分音">四分音</a></li>
+                    <li><a href="https://swarajtaka.com/ピアノにはない微分音の音楽って？/">ウード（フレットレスなアラブの弦楽器）</a></li>
+                    <li><a href="https://twitter.com/rwiiug/status/1376600325725954057">「四分音」の音程（24平均律）</a></li>
+                    <li><a href="https://soundquest.jp/quest/melody/melody-mv3/blue-note/">ブルーノートも微分音</a></li>
+                </ul>
+            </section>
+            <section>
                 <h2>詳細</h2>
                 <section>
                     <h3>ブログ</h3>
