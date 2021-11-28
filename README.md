@@ -8,9 +8,8 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 進捗（コミット）
 
-- Aboutに今後の課題を追記 [#3](https://github.com/ryo-i/scale-player/issues/3)
-- コードの内容をブログにまとめる [#4](https://github.com/ryo-i/scale-player/issues/4)
+- ブログ完成。リンクを追加 [#4](https://github.com/ryo-i/scale-player/issues/4)
 
 ## 詳細（ブログ）
 
-※参考：[作成中]
+※参考：[【React & Tone.js】スケールプレイヤーを作った（いろいろなスケールを調べて音も聴けるアプリ）](https://www.i-ryo.com/entry/2021/11/28/153950)

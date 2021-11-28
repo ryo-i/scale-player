@@ -113,7 +113,7 @@ function About() {
                 <h2>詳細</h2>
                 <section>
                     <h3>ブログ</h3>
-                    <p>作成中 - クモのようにコツコツと</p>
+                    <p><a href="https://www.i-ryo.com/entry/2021/11/28/153950">【React & Tone.js】スケールプレイヤーを作った（いろいろなスケールを調べて音も聴けるアプリ） - クモのようにコツコツと</a></p>
                 </section>
                 <section>
                     <h3>ソースコード（GitHub）</h3>
