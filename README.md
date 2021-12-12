@@ -2,9 +2,9 @@
 
 Tone.jsを使ったスケールプレイヤー
 
-## 作っているもの
+## 作ったもの
 
-※参考：[https://scale-player.vercel.app/]
+※参考：(プレビュー)[https://scale-player.vercel.app/]
 
 ## 進捗（コミット）
 
