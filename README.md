@@ -4,7 +4,7 @@ Tone.jsを使ったスケールプレイヤー
 
 ## 作ったもの
 
-※参考：(プレビュー)[https://scale-player.vercel.app/]
+※参考：[プレビュー](https://scale-player.vercel.app/)
 
 ## 進捗（コミット）
 
